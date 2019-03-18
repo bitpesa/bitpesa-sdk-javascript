@@ -1,6 +1,6 @@
 import BitpesaSdk from 'bitpesa-sdk';
 
-const apiClient = new ApiClient({
+const apiClient = new BitpesaSdk.ApiClient({
   apiKey: '<key>',
   apiSecret: '<secret>',
   basePath: 'https://api-sandbox.bitpesa.co/v1'
@@ -19,9 +19,9 @@ async function accountValidationExample(apiClient) {
   const request = new BitpesaSdk.AccountValidationRequest();
   request.bank_account = '9040009999999';
   request.bank_code = '190100';
-  request.country = AccountValidationRequest.CountryEnum.GH;
-  request.currency = AccountValidationRequest.CurrencyEnum.GHS;
-  request.method = AccountValidationRequest.MethodEnum.BANK;
+  request.country = BitpesaSdk.AccountValidationRequest.CountryEnum.GH;
+  request.currency = BitpesaSdk.AccountValidationRequest.CurrencyEnum.GHS;
+  request.method = BitpesaSdk.AccountValidationRequest.MethodEnum.BANK;
   const api = new BitpesaSdk.AccountValidationApi(apiClient);
   try {
     const response = await api.postAccountValidations(request);
@@ -340,35 +340,35 @@ async function webhookParseExample(apiClient) {
     "expires_at": "2017-07-24T16:08:58Z"
   }
 }`;
-  const webhook = apiClient.parseResponseString(webhookContent, Webhook);
+  const webhook = apiClient.parseResponseString(webhookContent, BitpesaSdk.Webhook);
   if (webhook.event.startsWith('transaction')) {
     const transactionWebhook = apiClient.parseResponseString(
       webhookContent,
-      TransactionWebhook
+      BitpesaSdk.TransactionWebhook
     );
     console.log(transactionWebhook);
   } else if (webhook.event.startsWith('recipient')) {
     const recipientWebhook = apiClient.parseResponseString(
       webhookContent,
-      RecipientWebhook
+      BitpesaSdk.RecipientWebhook
     );
     console.log(recipientWebhook);
   } else if (webhook.event.startsWith('payout_method')) {
     const payoutMethodWebhook = apiClient.parseResponseString(
       webhookContent,
-      PayoutMethodWebhook
+      BitpesaSdk.PayoutMethodWebhook
     );
     console.log(payoutMethodWebhook);
   } else if (webhook.event.startsWith('sender')) {
     const senderWebhook = apiClient.parseResponseString(
       webhookContent,
-      SenderWebhook
+      BitpesaSdk.SenderWebhook
     );
     console.log(senderWebhook);
   } else if (webhook.event.startsWith('document')) {
     const documentWebhook = apiClient.parseResponseString(
       webhookContent,
-      DocumentWebhook
+      BitpesaSdk.DocumentWebhook
     );
     console.log(documentWebhook);
   }
