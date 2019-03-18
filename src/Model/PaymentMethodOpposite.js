@@ -18,7 +18,7 @@ import PaymentMethod from './PaymentMethod';
 /**
  * The PaymentMethodOpposite model module.
  * @module Model/PaymentMethodOpposite
- * @version 0.1.0
+ * @version 0.2.0
  */
 class PaymentMethodOpposite {
     /**

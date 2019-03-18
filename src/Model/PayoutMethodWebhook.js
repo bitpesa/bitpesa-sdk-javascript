@@ -18,7 +18,7 @@ import Webhook from './Webhook';
 /**
  * The PayoutMethodWebhook model module.
  * @module Model/PayoutMethodWebhook
- * @version 0.1.0
+ * @version 0.2.0
  */
 class PayoutMethodWebhook {
     /**
