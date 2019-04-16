@@ -81,12 +81,16 @@ import Sender from './Model/Sender';
 import SenderListResponse from './Model/SenderListResponse';
 import SenderRequest from './Model/SenderRequest';
 import SenderResponse from './Model/SenderResponse';
+import SenderResponseExisting from './Model/SenderResponseExisting';
+import SenderResponseMeta from './Model/SenderResponseMeta';
 import SenderState from './Model/SenderState';
 import SenderWebhook from './Model/SenderWebhook';
 import Transaction from './Model/Transaction';
 import TransactionListResponse from './Model/TransactionListResponse';
 import TransactionRequest from './Model/TransactionRequest';
 import TransactionResponse from './Model/TransactionResponse';
+import TransactionResponseExisting from './Model/TransactionResponseExisting';
+import TransactionResponseMeta from './Model/TransactionResponseMeta';
 import TransactionState from './Model/TransactionState';
 import TransactionTraits from './Model/TransactionTraits';
 import TransactionWebhook from './Model/TransactionWebhook';
@@ -565,6 +569,18 @@ export {
     SenderResponse,
 
     /**
+     * The SenderResponseExisting model constructor.
+     * @property {module:Model/SenderResponseExisting}
+     */
+    SenderResponseExisting,
+
+    /**
+     * The SenderResponseMeta model constructor.
+     * @property {module:Model/SenderResponseMeta}
+     */
+    SenderResponseMeta,
+
+    /**
      * The SenderState model constructor.
      * @property {module:Model/SenderState}
      */
@@ -599,6 +615,18 @@ export {
      * @property {module:Model/TransactionResponse}
      */
     TransactionResponse,
+
+    /**
+     * The TransactionResponseExisting model constructor.
+     * @property {module:Model/TransactionResponseExisting}
+     */
+    TransactionResponseExisting,
+
+    /**
+     * The TransactionResponseMeta model constructor.
+     * @property {module:Model/TransactionResponseMeta}
+     */
+    TransactionResponseMeta,
 
     /**
      * The TransactionState model constructor.

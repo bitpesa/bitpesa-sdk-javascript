@@ -54,12 +54,20 @@ class DebitRequestWrapper {
             DebitRequest.constructFromObject(data, obj);
             DebitListRequest.constructFromObject(data, obj);
 
+            if (data.hasOwnProperty('debit')) {
+                obj['debit'] = ApiClient.convertToType(data['debit'], [Debit]);
+            }
         }
         return obj;
     }
 
 
 }
+
+/**
+ * @member {Array.<module:Model/Debit>} debit
+ */
+DebitRequestWrapper.prototype['debit'] = undefined;
 
 
 // Implement DebitRequest interface:

@@ -24,7 +24,6 @@ class PaymentMethodOpposite {
     /**
      * Constructs a new <code>PaymentMethodOpposite</code>.
      * @alias module:Model/PaymentMethodOpposite
-     * @extends module:Model/PaymentMethod
      * @implements module:Model/PaymentMethod
      */
     constructor() { 
@@ -51,8 +50,25 @@ class PaymentMethodOpposite {
         if (data) {
             obj = obj || new PaymentMethodOpposite();
             PaymentMethod.constructFromObject(data, obj);
-            PaymentMethod.constructFromObject(data, obj);
 
+            if (data.hasOwnProperty('type')) {
+                obj['type'] = ApiClient.convertToType(data['type'], 'String');
+            }
+            if (data.hasOwnProperty('provider')) {
+                obj['provider'] = ApiClient.convertToType(data['provider'], 'String');
+            }
+            if (data.hasOwnProperty('otc_permitted')) {
+                obj['otc_permitted'] = ApiClient.convertToType(data['otc_permitted'], 'Boolean');
+            }
+            if (data.hasOwnProperty('details')) {
+                obj['details'] = ApiClient.convertToType(data['details'], ['String']);
+            }
+            if (data.hasOwnProperty('default')) {
+                obj['default'] = ApiClient.convertToType(data['default'], 'Boolean');
+            }
+            if (data.hasOwnProperty('fields')) {
+                obj['fields'] = ApiClient.convertToType(data['fields'], {'String': FieldDescription});
+            }
             if (data.hasOwnProperty('opposites')) {
                 obj['opposites'] = ApiClient.convertToType(data['opposites'], [PaymentMethod]);
             }
@@ -62,6 +78,42 @@ class PaymentMethodOpposite {
 
 
 }
+
+/**
+ * Details currency and type of payment.
+ * @member {String} type
+ */
+PaymentMethodOpposite.prototype['type'] = undefined;
+
+/**
+ * Identifies the payment provider.
+ * @member {String} provider
+ */
+PaymentMethodOpposite.prototype['provider'] = undefined;
+
+/**
+ * Are over the counter transactions permitted?
+ * @member {Boolean} otc_permitted
+ */
+PaymentMethodOpposite.prototype['otc_permitted'] = undefined;
+
+/**
+ * Fields required to make the payment depending on type.
+ * @member {Array.<String>} details
+ */
+PaymentMethodOpposite.prototype['details'] = undefined;
+
+/**
+ * Boolean revealing whether this is the default payout method. Only present on payout methods
+ * @member {Boolean} default
+ */
+PaymentMethodOpposite.prototype['default'] = undefined;
+
+/**
+ * The fields needed for payments with this payment method with details on validation requirements
+ * @member {Object.<String, module:Model/FieldDescription>} fields
+ */
+PaymentMethodOpposite.prototype['fields'] = undefined;
 
 /**
  * List of all providers that can be used in conjunction with the main provider

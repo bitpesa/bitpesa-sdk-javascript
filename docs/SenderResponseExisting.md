@@ -1,8 +1,8 @@
-# BitpesaSdk.DebitRequestWrapper
+# BitpesaSdk.SenderResponseExisting
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**debit** | [**[Debit]**](Debit.md) |  | [optional] 
+**sender** | [**Sender**](Sender.md) |  | [optional] 
 
 

@@ -99,6 +99,9 @@ class Transaction {
             if (data.hasOwnProperty('expires_at')) {
                 obj['expires_at'] = ApiClient.convertToType(data['expires_at'], 'Date');
             }
+            if (data.hasOwnProperty('external_id')) {
+                obj['external_id'] = ApiClient.convertToType(data['external_id'], 'String');
+            }
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
@@ -186,6 +189,12 @@ Transaction.prototype['created_at'] = undefined;
  * @member {Date} expires_at
  */
 Transaction.prototype['expires_at'] = undefined;
+
+/**
+ * Optional ID that is supplied by partner linking it to the partner's own Sender ID. Note: if present we will validate whether the sent ID is a duplicate in our system or not.
+ * @member {String} external_id
+ */
+Transaction.prototype['external_id'] = undefined;
 
 /**
  * @member {String} id

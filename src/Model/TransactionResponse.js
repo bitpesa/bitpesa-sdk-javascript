@@ -13,6 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import Transaction from './Transaction';
+import TransactionResponseMeta from './TransactionResponseMeta';
 
 /**
  * The TransactionResponse model module.
@@ -51,6 +52,9 @@ class TransactionResponse {
             if (data.hasOwnProperty('object')) {
                 obj['object'] = Transaction.constructFromObject(data['object']);
             }
+            if (data.hasOwnProperty('meta')) {
+                obj['meta'] = TransactionResponseMeta.constructFromObject(data['meta']);
+            }
         }
         return obj;
     }
@@ -62,6 +66,11 @@ class TransactionResponse {
  * @member {module:Model/Transaction} object
  */
 TransactionResponse.prototype['object'] = undefined;
+
+/**
+ * @member {module:Model/TransactionResponseMeta} meta
+ */
+TransactionResponse.prototype['meta'] = undefined;
 
 
 

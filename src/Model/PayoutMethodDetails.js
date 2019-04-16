@@ -40,24 +40,10 @@ class PayoutMethodDetails {
      * @implements module:Model/PayoutMethodDetailsIBAN
      * @implements module:Model/PayoutMethodDetailsMADCash
      * @implements module:Model/PayoutMethodDetailsBalance
-     * @param firstName {} 
-     * @param lastName {} 
-     * @param bankCode {} 
-     * @param bankAccount {} 
-     * @param bankAccountType {} 
-     * @param phoneNumber {} 
-     * @param mobileProvider {} 
-     * @param bankName {} 
-     * @param iban {} 
-     * @param senderIdentityCardType {} 
-     * @param senderIdentityCardId {} 
-     * @param senderCityOfBirth {} 
-     * @param senderCountryOfBirth {} 
-     * @param senderGender {} 
      */
-    constructor(firstName, lastName, bankCode, bankAccount, bankAccountType, phoneNumber, mobileProvider, bankName, iban, senderIdentityCardType, senderIdentityCardId, senderCityOfBirth, senderCountryOfBirth, senderGender) { 
+    constructor() { 
         PayoutMethodDetailsNGNBank.initialize(this, firstName, lastName, bankCode, bankAccount, bankAccountType);PayoutMethodDetailsMobile.initialize(this, firstName, lastName, phoneNumber);PayoutMethodDetailsXOFMobile.initialize(this, firstName, lastName, phoneNumber, mobileProvider);PayoutMethodDetailsGHSBank.initialize(this, firstName, lastName, bankCode, bankAccount);PayoutMethodDetailsIBAN.initialize(this, firstName, lastName, bankName, iban);PayoutMethodDetailsMADCash.initialize(this, firstName, lastName, phoneNumber, senderIdentityCardType, senderIdentityCardId, senderCityOfBirth, senderCountryOfBirth, senderGender);PayoutMethodDetailsBalance.initialize(this);
-        PayoutMethodDetails.initialize(this, firstName, lastName, bankCode, bankAccount, bankAccountType, phoneNumber, mobileProvider, bankName, iban, senderIdentityCardType, senderIdentityCardId, senderCityOfBirth, senderCountryOfBirth, senderGender);
+        PayoutMethodDetails.initialize(this);
     }
 
     /**
@@ -65,7 +51,21 @@ class PayoutMethodDetails {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, firstName, lastName, bankCode, bankAccount, bankAccountType, phoneNumber, mobileProvider, bankName, iban, senderIdentityCardType, senderIdentityCardId, senderCityOfBirth, senderCountryOfBirth, senderGender) { 
+    static initialize(obj) { 
+        obj['first_name'] = firstName;
+        obj['last_name'] = lastName;
+        obj['bank_code'] = bankCode;
+        obj['bank_account'] = bankAccount;
+        obj['bank_account_type'] = bankAccountType;
+        obj['phone_number'] = phoneNumber;
+        obj['mobile_provider'] = mobileProvider;
+        obj['bank_name'] = bankName;
+        obj['iban'] = iban;
+        obj['sender_identity_card_type'] = senderIdentityCardType;
+        obj['sender_identity_card_id'] = senderIdentityCardId;
+        obj['sender_city_of_birth'] = senderCityOfBirth;
+        obj['sender_country_of_birth'] = senderCountryOfBirth;
+        obj['sender_gender'] = senderGender;
     }
 
     /**
@@ -86,12 +86,164 @@ class PayoutMethodDetails {
             PayoutMethodDetailsMADCash.constructFromObject(data, obj);
             PayoutMethodDetailsBalance.constructFromObject(data, obj);
 
+            if (data.hasOwnProperty('first_name')) {
+                obj['first_name'] = ApiClient.convertToType(data['first_name'], 'String');
+            }
+            if (data.hasOwnProperty('last_name')) {
+                obj['last_name'] = ApiClient.convertToType(data['last_name'], 'String');
+            }
+            if (data.hasOwnProperty('bank_code')) {
+                obj['bank_code'] = ApiClient.convertToType(data['bank_code'], 'String');
+            }
+            if (data.hasOwnProperty('bank_account')) {
+                obj['bank_account'] = ApiClient.convertToType(data['bank_account'], 'String');
+            }
+            if (data.hasOwnProperty('bank_account_type')) {
+                obj['bank_account_type'] = PayoutMethodBankAccountTypeEnum.constructFromObject(data['bank_account_type']);
+            }
+            if (data.hasOwnProperty('phone_number')) {
+                obj['phone_number'] = ApiClient.convertToType(data['phone_number'], 'String');
+            }
+            if (data.hasOwnProperty('mobile_provider')) {
+                obj['mobile_provider'] = PayoutMethodMobileProviderEnum.constructFromObject(data['mobile_provider']);
+            }
+            if (data.hasOwnProperty('bank_name')) {
+                obj['bank_name'] = ApiClient.convertToType(data['bank_name'], 'String');
+            }
+            if (data.hasOwnProperty('iban')) {
+                obj['iban'] = ApiClient.convertToType(data['iban'], 'String');
+            }
+            if (data.hasOwnProperty('bic')) {
+                obj['bic'] = ApiClient.convertToType(data['bic'], 'String');
+            }
+            if (data.hasOwnProperty('sender_identity_card_type')) {
+                obj['sender_identity_card_type'] = PayoutMethodIdentityCardTypeEnum.constructFromObject(data['sender_identity_card_type']);
+            }
+            if (data.hasOwnProperty('sender_identity_card_id')) {
+                obj['sender_identity_card_id'] = ApiClient.convertToType(data['sender_identity_card_id'], 'String');
+            }
+            if (data.hasOwnProperty('sender_city_of_birth')) {
+                obj['sender_city_of_birth'] = ApiClient.convertToType(data['sender_city_of_birth'], 'String');
+            }
+            if (data.hasOwnProperty('sender_country_of_birth')) {
+                obj['sender_country_of_birth'] = ApiClient.convertToType(data['sender_country_of_birth'], 'String');
+            }
+            if (data.hasOwnProperty('sender_gender')) {
+                obj['sender_gender'] = PayoutMethodGenderEnum.constructFromObject(data['sender_gender']);
+            }
+            if (data.hasOwnProperty('reason')) {
+                obj['reason'] = ApiClient.convertToType(data['reason'], 'String');
+            }
+            if (data.hasOwnProperty('identity_card_type')) {
+                obj['identity_card_type'] = PayoutMethodIdentityCardTypeEnum.constructFromObject(data['identity_card_type']);
+            }
+            if (data.hasOwnProperty('identity_card_id')) {
+                obj['identity_card_id'] = ApiClient.convertToType(data['identity_card_id'], 'String');
+            }
+            if (data.hasOwnProperty('reference')) {
+                obj['reference'] = ApiClient.convertToType(data['reference'], 'String');
+            }
         }
         return obj;
     }
 
 
 }
+
+/**
+ * @member {String} first_name
+ */
+PayoutMethodDetails.prototype['first_name'] = undefined;
+
+/**
+ * @member {String} last_name
+ */
+PayoutMethodDetails.prototype['last_name'] = undefined;
+
+/**
+ * @member {String} bank_code
+ */
+PayoutMethodDetails.prototype['bank_code'] = undefined;
+
+/**
+ * @member {String} bank_account
+ */
+PayoutMethodDetails.prototype['bank_account'] = undefined;
+
+/**
+ * @member {module:Model/PayoutMethodBankAccountTypeEnum} bank_account_type
+ */
+PayoutMethodDetails.prototype['bank_account_type'] = undefined;
+
+/**
+ * @member {String} phone_number
+ */
+PayoutMethodDetails.prototype['phone_number'] = undefined;
+
+/**
+ * @member {module:Model/PayoutMethodMobileProviderEnum} mobile_provider
+ */
+PayoutMethodDetails.prototype['mobile_provider'] = undefined;
+
+/**
+ * @member {String} bank_name
+ */
+PayoutMethodDetails.prototype['bank_name'] = undefined;
+
+/**
+ * @member {String} iban
+ */
+PayoutMethodDetails.prototype['iban'] = undefined;
+
+/**
+ * @member {String} bic
+ */
+PayoutMethodDetails.prototype['bic'] = undefined;
+
+/**
+ * @member {module:Model/PayoutMethodIdentityCardTypeEnum} sender_identity_card_type
+ */
+PayoutMethodDetails.prototype['sender_identity_card_type'] = undefined;
+
+/**
+ * @member {String} sender_identity_card_id
+ */
+PayoutMethodDetails.prototype['sender_identity_card_id'] = undefined;
+
+/**
+ * @member {String} sender_city_of_birth
+ */
+PayoutMethodDetails.prototype['sender_city_of_birth'] = undefined;
+
+/**
+ * @member {String} sender_country_of_birth
+ */
+PayoutMethodDetails.prototype['sender_country_of_birth'] = undefined;
+
+/**
+ * @member {module:Model/PayoutMethodGenderEnum} sender_gender
+ */
+PayoutMethodDetails.prototype['sender_gender'] = undefined;
+
+/**
+ * @member {String} reason
+ */
+PayoutMethodDetails.prototype['reason'] = undefined;
+
+/**
+ * @member {module:Model/PayoutMethodIdentityCardTypeEnum} identity_card_type
+ */
+PayoutMethodDetails.prototype['identity_card_type'] = undefined;
+
+/**
+ * @member {String} identity_card_id
+ */
+PayoutMethodDetails.prototype['identity_card_id'] = undefined;
+
+/**
+ * @member {String} reference
+ */
+PayoutMethodDetails.prototype['reference'] = undefined;
 
 
 // Implement PayoutMethodDetailsNGNBank interface:

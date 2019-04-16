@@ -147,6 +147,7 @@ export default class SendersApi {
      * @param {Number} opts.per The number of results to load per page (defaults to 10)
      * @param {String} opts.createdAtFrom Start date to filter recipients by created_at range Allows filtering results by the specified &#x60;created_at&#x60; timeframe.  Example: &#x60;/v1/recipients?created_at_from&#x3D;2018-06-06&amp;created_at_to&#x3D;2018-06-08&#x60;
      * @param {String} opts.createdAtTo End date to filter recipients by created_at range Allows filtering results by the specified &#x60;created_at&#x60; timeframe.  Example: &#x60;/v1/recipients?created_at_from&#x3D;2018-06-06&amp;created_at_to&#x3D;2018-06-08&#x60;
+     * @param {String} opts.externalId Allows filtering results by &#x60;external_id&#x60;.  Example: &#x60;/v1/senders?external_id&#x3D;26ec8517-2f0d-48c0-b74f-0bccb9ab3a87&#x60;
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:Model/SenderListResponse} and HTTP response
      */
     getSendersWithHttpInfo(opts) {
@@ -160,7 +161,8 @@ export default class SendersApi {
         'page': opts['page'],
         'per': opts['per'],
         'created_at_from': opts['createdAtFrom'],
-        'created_at_to': opts['createdAtTo']
+        'created_at_to': opts['createdAtTo'],
+        'external_id': opts['externalId']
       };
       let headerParams = {
       };
@@ -187,6 +189,7 @@ export default class SendersApi {
      * @param {Number} opts.per The number of results to load per page (defaults to 10)
      * @param {String} opts.createdAtFrom Start date to filter recipients by created_at range Allows filtering results by the specified &#x60;created_at&#x60; timeframe.  Example: &#x60;/v1/recipients?created_at_from&#x3D;2018-06-06&amp;created_at_to&#x3D;2018-06-08&#x60;
      * @param {String} opts.createdAtTo End date to filter recipients by created_at range Allows filtering results by the specified &#x60;created_at&#x60; timeframe.  Example: &#x60;/v1/recipients?created_at_from&#x3D;2018-06-06&amp;created_at_to&#x3D;2018-06-08&#x60;
+     * @param {String} opts.externalId Allows filtering results by &#x60;external_id&#x60;.  Example: &#x60;/v1/senders?external_id&#x3D;26ec8517-2f0d-48c0-b74f-0bccb9ab3a87&#x60;
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:Model/SenderListResponse}
      */
     getSenders(opts) {

@@ -23,7 +23,6 @@ class CurrencyOpposite {
     /**
      * Constructs a new <code>CurrencyOpposite</code>.
      * @alias module:Model/CurrencyOpposite
-     * @extends module:Model/Currency
      * @implements module:Model/Currency
      */
     constructor() { 
@@ -50,8 +49,37 @@ class CurrencyOpposite {
         if (data) {
             obj = obj || new CurrencyOpposite();
             Currency.constructFromObject(data, obj);
-            Currency.constructFromObject(data, obj);
 
+            if (data.hasOwnProperty('code')) {
+                obj['code'] = ApiClient.convertToType(data['code'], 'String');
+            }
+            if (data.hasOwnProperty('name')) {
+                obj['name'] = ApiClient.convertToType(data['name'], 'String');
+            }
+            if (data.hasOwnProperty('symbol')) {
+                obj['symbol'] = ApiClient.convertToType(data['symbol'], 'String');
+            }
+            if (data.hasOwnProperty('decimals')) {
+                obj['decimals'] = ApiClient.convertToType(data['decimals'], 'Number');
+            }
+            if (data.hasOwnProperty('subunit_to_unit')) {
+                obj['subunit_to_unit'] = ApiClient.convertToType(data['subunit_to_unit'], 'String');
+            }
+            if (data.hasOwnProperty('primary')) {
+                obj['primary'] = ApiClient.convertToType(data['primary'], 'Boolean');
+            }
+            if (data.hasOwnProperty('min')) {
+                obj['min'] = ApiClient.convertToType(data['min'], 'String');
+            }
+            if (data.hasOwnProperty('max')) {
+                obj['max'] = ApiClient.convertToType(data['max'], 'String');
+            }
+            if (data.hasOwnProperty('margin')) {
+                obj['margin'] = ApiClient.convertToType(data['margin'], 'String');
+            }
+            if (data.hasOwnProperty('usd_equivalent')) {
+                obj['usd_equivalent'] = ApiClient.convertToType(data['usd_equivalent'], 'String');
+            }
             if (data.hasOwnProperty('rate')) {
                 obj['rate'] = ApiClient.convertToType(data['rate'], 'Number');
             }
@@ -61,6 +89,66 @@ class CurrencyOpposite {
 
 
 }
+
+/**
+ * The currency code in 3-character alpha ISO 4217 currency format
+ * @member {String} code
+ */
+CurrencyOpposite.prototype['code'] = undefined;
+
+/**
+ * Name of currency
+ * @member {String} name
+ */
+CurrencyOpposite.prototype['name'] = undefined;
+
+/**
+ * Symbol of currency
+ * @member {String} symbol
+ */
+CurrencyOpposite.prototype['symbol'] = undefined;
+
+/**
+ * Number of decimal points
+ * @member {Number} decimals
+ */
+CurrencyOpposite.prototype['decimals'] = undefined;
+
+/**
+ * Subunits in Unit (eg. there are 100 cents in 1 US Dollar)
+ * @member {String} subunit_to_unit
+ */
+CurrencyOpposite.prototype['subunit_to_unit'] = undefined;
+
+/**
+ * Is this a primary currency?
+ * @member {Boolean} primary
+ */
+CurrencyOpposite.prototype['primary'] = undefined;
+
+/**
+ * The minimum amount allowed in a transaction
+ * @member {String} min
+ */
+CurrencyOpposite.prototype['min'] = undefined;
+
+/**
+ * The maximum amount allowed in a transaction
+ * @member {String} max
+ */
+CurrencyOpposite.prototype['max'] = undefined;
+
+/**
+ * The margin set for transactions in this currency
+ * @member {String} margin
+ */
+CurrencyOpposite.prototype['margin'] = undefined;
+
+/**
+ * The equivalent of the currency to 1 USD
+ * @member {String} usd_equivalent
+ */
+CurrencyOpposite.prototype['usd_equivalent'] = undefined;
 
 /**
  * The rate of this particular currency with the base one

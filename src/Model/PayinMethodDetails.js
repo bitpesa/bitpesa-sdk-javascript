@@ -27,12 +27,10 @@ class PayinMethodDetails {
      * @alias module:Model/PayinMethodDetails
      * @implements module:Model/PayinMethodDetailsNGNBank
      * @implements module:Model/PayinMethodDetailsMobile
-     * @param redirectUrl {} This is where the user should be redirected back when the payment has been finished
-     * @param phoneNumber {} The phone number where the funds should be collected from
      */
-    constructor(redirectUrl, phoneNumber) { 
+    constructor() { 
         PayinMethodDetailsNGNBank.initialize(this, redirectUrl);PayinMethodDetailsMobile.initialize(this, phoneNumber);
-        PayinMethodDetails.initialize(this, redirectUrl, phoneNumber);
+        PayinMethodDetails.initialize(this);
     }
 
     /**
@@ -40,7 +38,9 @@ class PayinMethodDetails {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, redirectUrl, phoneNumber) { 
+    static initialize(obj) { 
+        obj['redirect_url'] = redirectUrl;
+        obj['phone_number'] = phoneNumber;
     }
 
     /**
@@ -56,12 +56,39 @@ class PayinMethodDetails {
             PayinMethodDetailsNGNBank.constructFromObject(data, obj);
             PayinMethodDetailsMobile.constructFromObject(data, obj);
 
+            if (data.hasOwnProperty('redirect_url')) {
+                obj['redirect_url'] = ApiClient.convertToType(data['redirect_url'], 'String');
+            }
+            if (data.hasOwnProperty('phone_number')) {
+                obj['phone_number'] = ApiClient.convertToType(data['phone_number'], 'String');
+            }
+            if (data.hasOwnProperty('send_instructions')) {
+                obj['send_instructions'] = ApiClient.convertToType(data['send_instructions'], 'Boolean');
+            }
         }
         return obj;
     }
 
 
 }
+
+/**
+ * This is where the user should be redirected back when the payment has been finished
+ * @member {String} redirect_url
+ */
+PayinMethodDetails.prototype['redirect_url'] = undefined;
+
+/**
+ * The phone number where the funds should be collected from
+ * @member {String} phone_number
+ */
+PayinMethodDetails.prototype['phone_number'] = undefined;
+
+/**
+ * States whether to send out the instructions to the phone number on how to pay the funds or not. This shuold always be set to true, otherwise the sender might not receive a prompt for payment.
+ * @member {Boolean} send_instructions
+ */
+PayinMethodDetails.prototype['send_instructions'] = undefined;
 
 
 // Implement PayinMethodDetailsNGNBank interface:

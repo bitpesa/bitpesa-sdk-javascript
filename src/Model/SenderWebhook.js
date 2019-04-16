@@ -24,15 +24,11 @@ class SenderWebhook {
     /**
      * Constructs a new <code>SenderWebhook</code>.
      * @alias module:Model/SenderWebhook
-     * @extends module:Model/Webhook
      * @implements module:Model/Webhook
-     * @param webhook {} The ID of the webhook that was used to send out this callback
-     * @param event {} The event that triggered this webhook
-     * @param _object {} 
      */
-    constructor(webhook, event, _object) { 
+    constructor() { 
         Webhook.initialize(this, webhook, event, _object);
-        SenderWebhook.initialize(this, webhook, event, _object);
+        SenderWebhook.initialize(this);
     }
 
     /**
@@ -40,7 +36,10 @@ class SenderWebhook {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, webhook, event, _object) { 
+    static initialize(obj) { 
+        obj['webhook'] = webhook;
+        obj['event'] = event;
+        obj['object'] = _object;
     }
 
     /**
@@ -54,8 +53,13 @@ class SenderWebhook {
         if (data) {
             obj = obj || new SenderWebhook();
             Webhook.constructFromObject(data, obj);
-            Webhook.constructFromObject(data, obj);
 
+            if (data.hasOwnProperty('webhook')) {
+                obj['webhook'] = ApiClient.convertToType(data['webhook'], 'String');
+            }
+            if (data.hasOwnProperty('event')) {
+                obj['event'] = ApiClient.convertToType(data['event'], 'String');
+            }
             if (data.hasOwnProperty('object')) {
                 obj['object'] = Sender.constructFromObject(data['object']);
             }
@@ -65,6 +69,18 @@ class SenderWebhook {
 
 
 }
+
+/**
+ * The ID of the webhook that was used to send out this callback
+ * @member {String} webhook
+ */
+SenderWebhook.prototype['webhook'] = undefined;
+
+/**
+ * The event that triggered this webhook
+ * @member {String} event
+ */
+SenderWebhook.prototype['event'] = undefined;
 
 /**
  * @member {module:Model/Sender} object

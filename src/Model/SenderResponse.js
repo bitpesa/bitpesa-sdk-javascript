@@ -13,6 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import Sender from './Sender';
+import SenderResponseMeta from './SenderResponseMeta';
 
 /**
  * The SenderResponse model module.
@@ -51,6 +52,9 @@ class SenderResponse {
             if (data.hasOwnProperty('object')) {
                 obj['object'] = Sender.constructFromObject(data['object']);
             }
+            if (data.hasOwnProperty('meta')) {
+                obj['meta'] = SenderResponseMeta.constructFromObject(data['meta']);
+            }
         }
         return obj;
     }
@@ -62,6 +66,11 @@ class SenderResponse {
  * @member {module:Model/Sender} object
  */
 SenderResponse.prototype['object'] = undefined;
+
+/**
+ * @member {module:Model/SenderResponseMeta} meta
+ */
+SenderResponse.prototype['meta'] = undefined;
 
 
 
