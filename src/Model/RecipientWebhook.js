@@ -24,11 +24,15 @@ class RecipientWebhook {
     /**
      * Constructs a new <code>RecipientWebhook</code>.
      * @alias module:Model/RecipientWebhook
+     * @extends module:Model/Webhook
      * @implements module:Model/Webhook
+     * @param webhook {} The ID of the webhook that was used to send out this callback
+     * @param event {} The event that triggered this webhook
+     * @param _object {} 
      */
-    constructor() { 
+    constructor(webhook, event, _object) { 
         Webhook.initialize(this, webhook, event, _object);
-        RecipientWebhook.initialize(this);
+        RecipientWebhook.initialize(this, webhook, event, _object);
     }
 
     /**
@@ -36,10 +40,7 @@ class RecipientWebhook {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-        obj['webhook'] = webhook;
-        obj['event'] = event;
-        obj['object'] = _object;
+    static initialize(obj, webhook, event, _object) { 
     }
 
     /**
@@ -53,13 +54,8 @@ class RecipientWebhook {
         if (data) {
             obj = obj || new RecipientWebhook();
             Webhook.constructFromObject(data, obj);
+            Webhook.constructFromObject(data, obj);
 
-            if (data.hasOwnProperty('webhook')) {
-                obj['webhook'] = ApiClient.convertToType(data['webhook'], 'String');
-            }
-            if (data.hasOwnProperty('event')) {
-                obj['event'] = ApiClient.convertToType(data['event'], 'String');
-            }
             if (data.hasOwnProperty('object')) {
                 obj['object'] = Recipient.constructFromObject(data['object']);
             }
@@ -69,18 +65,6 @@ class RecipientWebhook {
 
 
 }
-
-/**
- * The ID of the webhook that was used to send out this callback
- * @member {String} webhook
- */
-RecipientWebhook.prototype['webhook'] = undefined;
-
-/**
- * The event that triggered this webhook
- * @member {String} event
- */
-RecipientWebhook.prototype['event'] = undefined;
 
 /**
  * @member {module:Model/Recipient} object
