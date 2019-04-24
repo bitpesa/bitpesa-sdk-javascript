@@ -248,5 +248,5 @@ apiClient.basePath = 'https://api-sandbox.bitpesa.co/v1';
 
 
 - API version: 1.0
-- Package version: 0.2.0
+- Package version: 0.3.0
 - Build package: org.openapitools.codegen.languages.JavascriptClientCodegen

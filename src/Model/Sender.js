@@ -19,7 +19,7 @@ import ValidationErrorDescription from './ValidationErrorDescription';
 /**
  * The Sender model module.
  * @module Model/Sender
- * @version 0.2.0
+ * @version 0.3.0
  */
 class Sender {
     /**
