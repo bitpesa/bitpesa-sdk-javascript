@@ -36,7 +36,7 @@ class ApiError {
 
 /**
 * @module ApiClient
-* @version 0.2.0
+* @version 0.3.0
 */
 
 /**
@@ -103,8 +103,6 @@ export default class ApiClient {
          this.requestAgent = null;
 
     }
-
-    
 
     /**
     * Returns a string representation for an actual parameter.
@@ -317,10 +315,16 @@ export default class ApiClient {
         const nonce = uuid();
         const bodyJson = bodyParam ? JSON.stringify(bodyParam) : '';
         const hash = crypto.createHash('sha512').update(bodyJson);
+        var query = ''
+
+        if (Object.keys(request.qs).length !== 0) {
+          query = '?' + querystring.stringify(request.qs)
+        }
+
         const toSign = [
             nonce,
             request.method,
-            request.url,
+            request.url + query,
             hash.digest('hex')
         ].join('&');
         const hmac = crypto.createHmac('sha512', this.apiSecret).update(toSign);

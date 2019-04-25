@@ -19,7 +19,7 @@ import DebitRequest from './DebitRequest';
 /**
  * The DebitRequestWrapper model module.
  * @module Model/DebitRequestWrapper
- * @version 0.2.0
+ * @version 0.3.0
  */
 class DebitRequestWrapper {
     /**
