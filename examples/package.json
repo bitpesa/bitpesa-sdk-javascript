@@ -11,5 +11,11 @@
   "license": "ISC",
   "dependencies": {
     "bitpesa-sdk": "^0.1.0"
+  },
+  "devDependencies": {
+    "install-local": "^1.0.0"
+  },
+  "localDependencies": {
+    "bitpesa-sdk-local": ".."
   }
 }
