@@ -17,7 +17,7 @@ import TransactionResponseExisting from './TransactionResponseExisting';
 /**
  * The TransactionResponseMeta model module.
  * @module Model/TransactionResponseMeta
- * @version 0.3.0
+ * @version 0.2.0
  */
 class TransactionResponseMeta {
     /**

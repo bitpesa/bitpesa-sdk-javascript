@@ -19,7 +19,7 @@ import CurrencyListResponse from '../Model/CurrencyListResponse';
 /**
 * CurrencyInfo service.
 * @module Api/CurrencyInfoApi
-* @version 0.3.0
+* @version 0.2.0
 */
 export default class CurrencyInfoApi {
 
