@@ -14,6 +14,8 @@ const apiClient = new BitpesaSdk.ApiClient({
 // getTransactionErrorMessageExample(apiClient);
 // webhookParseExample(apiClient);
 // getAccountsExample(apiClient);
+// getSendersByExternalId(apiClient);
+// getTransactionsByExternalId(apiClient);
 
 async function accountValidationExample(apiClient) {
   const request = new BitpesaSdk.AccountValidationRequest();
@@ -33,7 +35,7 @@ async function accountValidationExample(apiClient) {
         `Account Holder Name Error: ${accountValidationResponse.meta.error}`
       );
     } else {
-      throw e;
+      console.error(e.error.stack);
     }
   }
 }
@@ -55,7 +57,7 @@ async function createSenderExample(apiClient) {
   sender.postal_code = '798983';
   sender.birth_date = '1970-12-31';
   sender.documents = [];
-  sender.external_id = "EXTSEN-5555"
+  sender.external_id = 'EXTSEN-5555';
 
   try {
     const senderRequest = new BitpesaSdk.SenderRequest();
@@ -70,7 +72,7 @@ async function createSenderExample(apiClient) {
       const senderResponse = e.getResponseObject();
       console.error('Validation error:', senderResponse.object.errors);
     } else {
-      throw e;
+      console.error(e.error.stack);
     }
   }
 }
@@ -84,7 +86,10 @@ async function updateSenderExample(apiClient) {
     const senderRequest = new BitpesaSdk.SenderRequest();
     senderRequest.sender = sender;
 
-    const senderResponse = await api.patchSender('a35f0aab-c0e8-4ffd-9df0-d3ac7cc80a41',senderRequest);
+    const senderResponse = await api.patchSender(
+      'a35f0aab-c0e8-4ffd-9df0-d3ac7cc80a41',
+      senderRequest
+    );
     console.log(`Sender created! ID: ${senderResponse.object.id}`);
     console.log(senderResponse.object);
     return senderResponse.object.id;
@@ -93,7 +98,7 @@ async function updateSenderExample(apiClient) {
       const senderResponse = e.getResponseObject();
       console.error('Validation error:', senderResponse.object.errors);
     } else {
-      throw e;
+      console.error(e.error.stack);
     }
   }
 }
@@ -124,7 +129,7 @@ async function createTransactionExample(apiClient) {
   transaction.input_currency = 'GHS';
   transaction.sender = sender;
   transaction.recipients = [recipient];
-  transaction.external_id = 'EXTRAN-5555'
+  transaction.external_id = 'EXTRAN-5555';
 
   try {
     const transactionRequest = new BitpesaSdk.TransactionRequest();
@@ -138,7 +143,7 @@ async function createTransactionExample(apiClient) {
       const transactionResponse = e.getResponseObject();
       console.error('Validation error:', transactionResponse.object.errors);
     } else {
-      throw e;
+      console.error(e.error.stack);
     }
   }
 }
@@ -167,7 +172,7 @@ async function createAndFundTransactionExample(apiClient) {
         console.error('Transaction could not be funded');
         console.error(debitListResponse.object[0].errors);
       } else {
-        throw e;
+        console.error(e.error.stack);
       }
     }
   }
@@ -342,7 +347,10 @@ async function webhookParseExample(apiClient) {
     "expires_at": "2017-07-24T16:08:58Z"
   }
 }`;
-  const webhook = apiClient.parseResponseString(webhookContent, BitpesaSdk.Webhook);
+  const webhook = apiClient.parseResponseString(
+    webhookContent,
+    BitpesaSdk.Webhook
+  );
   if (webhook.event.startsWith('transaction')) {
     const transactionWebhook = apiClient.parseResponseString(
       webhookContent,
@@ -383,30 +391,30 @@ async function getAccountsExample(apiClient) {
     response.object.forEach(account => console.log(account));
     console.log(response.meta);
   } catch (e) {
-    console.error(e.stack);
+    console.error(e.error.stack);
   }
 }
 
 async function getSendersByExternalId(apiClient) {
   const api = new BitpesaSdk.SendersApi(apiClient, {});
-  opts = { externalId: 'EXTSEN-5555' }
+  opts = { externalId: 'EXTSEN-5555' };
   try {
     const response = await api.getSenders(opts);
     response.object.forEach(sender => console.log(sender));
     console.log(response.meta);
   } catch (e) {
-    console.error(e.stack);
+    console.error(e.error.stack);
   }
 }
 
 async function getTransactionsByExternalId(apiClient) {
   const api = new BitpesaSdk.TransactionsApi(apiClient, {});
-  opts = { externalId: 'EXTRAN-5555' }
+  opts = { externalId: 'EXTRAN-5555' };
   try {
     const response = await api.getTransactions(opts);
     response.object.forEach(transaction => console.log(transaction));
     console.log(response.meta);
   } catch (e) {
-    console.error(e.stack);
+    console.error(e.error.stack);
   }
 }

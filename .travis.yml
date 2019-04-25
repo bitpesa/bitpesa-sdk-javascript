@@ -7,6 +7,5 @@ node_js:
   - '5.11'
 before_install:
   - npm install
-
 script:
   - npm test
