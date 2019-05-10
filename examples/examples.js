@@ -191,13 +191,13 @@ async function getTransactionErrorMessageExample(apiClient) {
 }
 
 async function webhookParseExample(apiClient) {
-  const webhookHeader = `{
+  const webhookHeader = {
     "Authorization-Nonce": "authorization-nonce",
     "Authorization-Key": "authorization-key",
     "Authorization-Signature": "authorization-signature"
-  }`;
+  };
 
-  const webhookUrl = "url";
+  const webhookUrl = "http://webhook.url";
 
   const webhookContent = `{
     "webhook": "02b769ff-ffff-ffff-ffff-820d285d76c7",
@@ -394,8 +394,9 @@ async function webhookParseExample(apiClient) {
       );
       console.log(documentWebhook);
     }
+  } else {
+    console.log("Could not verify webhook signature");
   }
-
 }
 
 async function getAccountsExample(apiClient) {
