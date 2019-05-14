@@ -191,196 +191,211 @@ async function getTransactionErrorMessageExample(apiClient) {
 }
 
 async function webhookParseExample(apiClient) {
+  const webhookHeader = {
+    "Authorization-Nonce": "authorization-nonce",
+    "Authorization-Key": "authorization-key",
+    "Authorization-Signature": "authorization-signature"
+  };
+
+  const webhookUrl = "http://webhook.url";
+
   const webhookContent = `{
-  "webhook": "02b769ff-ffff-ffff-ffff-820d285d76c7",
-  "event": "transaction.created",
-  "object": {
-    "id": "9170b966-ffff-ffff-ffff-7af5ad7e335f",
-    "metadata": {},
-    "state": "approved",
-    "input_amount": 50.00,
-    "input_currency": "EUR",
-    "sender": {
-      "id": "4be2a144-ffff-ffff-ffff-8ebcbfbbbe0c",
-      "type": "person",
-      "state": "initial",
-      "state_reason": null,
-      "country": "GB",
-      "street": "Test",
-      "postal_code": "EH1 1TT",
-      "city": "London",
-      "phone_country": "GB",
-      "phone_number": "+447123456789",
-      "email": "test@example.com",
-      "ip": "127.0.0.1",
-      "first_name": "Test",
-      "last_name": "Name",
-      "birth_date": "1990-01-01",
+    "webhook": "02b769ff-ffff-ffff-ffff-820d285d76c7",
+    "event": "transaction.created",
+    "object": {
+      "id": "9170b966-ffff-ffff-ffff-7af5ad7e335f",
       "metadata": {},
-      "providers": {}
-    },
-    "payin_methods": [],
-    "paid_amount": 50.00,
-    "due_amount": 0,
-    "recipients": [
-      {
-        "id": "69dee5aa-ffff-ffff-ffff-0a2c06353c6b",
-        "transaction_id": "9170b966-ffff-ffff-ffff-7af5ad7e335f",
-        "created_at": "2017-07-24T15:08:58Z",
-        "input_usd_amount": 60.00,
+      "state": "approved",
+      "input_amount": 50.00,
+      "input_currency": "EUR",
+      "sender": {
+        "id": "4be2a144-ffff-ffff-ffff-8ebcbfbbbe0c",
+        "type": "person",
         "state": "initial",
-        "transaction_state": "initial",
-        "requested_amount": 50.00,
-        "requested_currency": "EUR",
-        "input_amount": 50.00,
-        "input_currency": "EUR",
-        "output_amount": 20001,
-        "output_currency": "NGN",
-        "payout_method": {
-          "id": "c67580ee-ffff-ffff-ffff-ac51f1d0c035",
-          "type": "NGN::Bank",
-          "details": {
-            "email": "",
-            "bank_code": "011",
-            "last_name": "Test",
-            "first_name": "User",
-            "bank_account": "1111111111",
-            "bank_account_type": "10"
-          },
-          "metadata": {},
-          "provider": "interswitch",
-          "fields": {
-            "email": {
-              "type": "input",
-              "validations": {
-                "format": "\\\\A((\\\\w+([\\\\-+.]\\\\w+)*@[a-zA-Z0-9]+([\\\\-\\\\.][a-zA-Z0-9]+)*)*){3,320}\\\\z"
-              }
+        "state_reason": null,
+        "country": "GB",
+        "street": "Test",
+        "postal_code": "EH1 1TT",
+        "city": "London",
+        "phone_country": "GB",
+        "phone_number": "+447123456789",
+        "email": "test@example.com",
+        "ip": "127.0.0.1",
+        "first_name": "Test",
+        "last_name": "Name",
+        "birth_date": "1990-01-01",
+        "metadata": {},
+        "providers": {}
+      },
+      "payin_methods": [],
+      "paid_amount": 50.00,
+      "due_amount": 0,
+      "recipients": [
+        {
+          "id": "69dee5aa-ffff-ffff-ffff-0a2c06353c6b",
+          "transaction_id": "9170b966-ffff-ffff-ffff-7af5ad7e335f",
+          "created_at": "2017-07-24T15:08:58Z",
+          "input_usd_amount": 60.00,
+          "state": "initial",
+          "transaction_state": "initial",
+          "requested_amount": 50.00,
+          "requested_currency": "EUR",
+          "input_amount": 50.00,
+          "input_currency": "EUR",
+          "output_amount": 20001,
+          "output_currency": "NGN",
+          "payout_method": {
+            "id": "c67580ee-ffff-ffff-ffff-ac51f1d0c035",
+            "type": "NGN::Bank",
+            "details": {
+              "email": "",
+              "bank_code": "011",
+              "last_name": "Test",
+              "first_name": "User",
+              "bank_account": "1111111111",
+              "bank_account_type": "10"
             },
-            "first_name": {
-              "type": "input",
-              "validations": {
-                "presence": true
-              }
-            },
-            "last_name": {
-              "type": "input",
-              "validations": {
-                "presence": true
-              }
-            },
-            "bank_code": {
-              "type": "select",
-              "options": {
-                "063": "Diamond Bank",
-                "050": "EcoBank",
-                "214": "FCMB Bank",
-                "070": "Fidelity Bank",
-                "011": "First Bank of Nigeria",
-                "058": "Guaranty Trust Bank ",
-                "030": "Heritage Bank",
-                "301": "Jaiz Bank",
-                "082": "Keystone ",
-                "014": "Mainstreet ",
-                "076": "Skye Bank",
-                "039": "Stanbic IBTC Bank ",
-                "232": "Sterling bank",
-                "032": "Union Bank",
-                "033": "United Bank for Africa ",
-                "215": "Unity Bank",
-                "035": "Wema Bank",
-                "057": "Zenith International "
+            "metadata": {},
+            "provider": "interswitch",
+            "fields": {
+              "email": {
+                "type": "input",
+                "validations": {
+                  "format": "\\\\A((\\\\w+([\\\\-+.]\\\\w+)*@[a-zA-Z0-9]+([\\\\-\\\\.][a-zA-Z0-9]+)*)*){3,320}\\\\z"
+                }
               },
-              "validations": {
-                "presence": true,
-                "inclusion": {
-                  "in": {
-                    "063": "Diamond Bank",
-                    "050": "EcoBank",
-                    "214": "FCMB Bank",
-                    "070": "Fidelity Bank",
-                    "011": "First Bank of Nigeria",
-                    "058": "Guaranty Trust Bank ",
-                    "030": "Heritage Bank",
-                    "301": "Jaiz Bank",
-                    "082": "Keystone ",
-                    "014": "Mainstreet ",
-                    "076": "Skye Bank",
-                    "039": "Stanbic IBTC Bank ",
-                    "232": "Sterling bank",
-                    "032": "Union Bank",
-                    "033": "United Bank for Africa ",
-                    "215": "Unity Bank",
-                    "035": "Wema Bank",
-                    "057": "Zenith International "
+              "first_name": {
+                "type": "input",
+                "validations": {
+                  "presence": true
+                }
+              },
+              "last_name": {
+                "type": "input",
+                "validations": {
+                  "presence": true
+                }
+              },
+              "bank_code": {
+                "type": "select",
+                "options": {
+                  "063": "Diamond Bank",
+                  "050": "EcoBank",
+                  "214": "FCMB Bank",
+                  "070": "Fidelity Bank",
+                  "011": "First Bank of Nigeria",
+                  "058": "Guaranty Trust Bank ",
+                  "030": "Heritage Bank",
+                  "301": "Jaiz Bank",
+                  "082": "Keystone ",
+                  "014": "Mainstreet ",
+                  "076": "Skye Bank",
+                  "039": "Stanbic IBTC Bank ",
+                  "232": "Sterling bank",
+                  "032": "Union Bank",
+                  "033": "United Bank for Africa ",
+                  "215": "Unity Bank",
+                  "035": "Wema Bank",
+                  "057": "Zenith International "
+                },
+                "validations": {
+                  "presence": true,
+                  "inclusion": {
+                    "in": {
+                      "063": "Diamond Bank",
+                      "050": "EcoBank",
+                      "214": "FCMB Bank",
+                      "070": "Fidelity Bank",
+                      "011": "First Bank of Nigeria",
+                      "058": "Guaranty Trust Bank ",
+                      "030": "Heritage Bank",
+                      "301": "Jaiz Bank",
+                      "082": "Keystone ",
+                      "014": "Mainstreet ",
+                      "076": "Skye Bank",
+                      "039": "Stanbic IBTC Bank ",
+                      "232": "Sterling bank",
+                      "032": "Union Bank",
+                      "033": "United Bank for Africa ",
+                      "215": "Unity Bank",
+                      "035": "Wema Bank",
+                      "057": "Zenith International "
+                    }
                   }
                 }
-              }
-            },
-            "bank_account": {
-              "type": "input",
-              "validations": {
-                "presence": true
-              }
-            },
-            "bank_account_type": {
-              "type": "select",
-              "options": {
-                "20": "Current",
-                "10": "Savings"
               },
-              "validations": {
-                "presence": true,
-                "inclusion": {
-                  "in": {
-                    "20": "Current",
-                    "10": "Savings"
+              "bank_account": {
+                "type": "input",
+                "validations": {
+                  "presence": true
+                }
+              },
+              "bank_account_type": {
+                "type": "select",
+                "options": {
+                  "20": "Current",
+                  "10": "Savings"
+                },
+                "validations": {
+                  "presence": true,
+                  "inclusion": {
+                    "in": {
+                      "20": "Current",
+                      "10": "Savings"
+                    }
                   }
                 }
               }
             }
-          }
-        },
-        "metadata": {}
-      }
-    ],
-    "created_at": "2017-07-24T15:08:58Z",
-    "expires_at": "2017-07-24T16:08:58Z"
-  }
-}`;
-  const webhook = apiClient.parseResponseString(
-    webhookContent,
-    BitpesaSdk.Webhook
-  );
-  if (webhook.event.startsWith('transaction')) {
-    const transactionWebhook = apiClient.parseResponseString(
+          },
+          "metadata": {}
+        }
+      ],
+      "created_at": "2017-07-24T15:08:58Z",
+      "expires_at": "2017-07-24T16:08:58Z"
+    }
+  }`;
+
+
+  if (apiClient.validateRequest(webhookUrl, webhookContent, webhookHeader)) {
+    const webhook = apiClient.parseResponseString(
       webhookContent,
-      BitpesaSdk.TransactionWebhook
+      BitpesaSdk.Webhook
     );
-    console.log(transactionWebhook);
-  } else if (webhook.event.startsWith('recipient')) {
-    const recipientWebhook = apiClient.parseResponseString(
-      webhookContent,
-      BitpesaSdk.RecipientWebhook
-    );
-    console.log(recipientWebhook);
-  } else if (webhook.event.startsWith('payout_method')) {
-    const payoutMethodWebhook = apiClient.parseResponseString(
-      webhookContent,
-      BitpesaSdk.PayoutMethodWebhook
-    );
-    console.log(payoutMethodWebhook);
-  } else if (webhook.event.startsWith('sender')) {
-    const senderWebhook = apiClient.parseResponseString(
-      webhookContent,
-      BitpesaSdk.SenderWebhook
-    );
-    console.log(senderWebhook);
-  } else if (webhook.event.startsWith('document')) {
-    const documentWebhook = apiClient.parseResponseString(
-      webhookContent,
-      BitpesaSdk.DocumentWebhook
-    );
-    console.log(documentWebhook);
+
+    if (webhook.event.startsWith('transaction')) {
+      const transactionWebhook = apiClient.parseResponseString(
+        webhookContent,
+        BitpesaSdk.TransactionWebhook
+      );
+      console.log(transactionWebhook);
+    } else if (webhook.event.startsWith('recipient')) {
+      const recipientWebhook = apiClient.parseResponseString(
+        webhookContent,
+        BitpesaSdk.RecipientWebhook
+      );
+      console.log(recipientWebhook);
+    } else if (webhook.event.startsWith('payout_method')) {
+      const payoutMethodWebhook = apiClient.parseResponseString(
+        webhookContent,
+        BitpesaSdk.PayoutMethodWebhook
+      );
+      console.log(payoutMethodWebhook);
+    } else if (webhook.event.startsWith('sender')) {
+      const senderWebhook = apiClient.parseResponseString(
+        webhookContent,
+        BitpesaSdk.SenderWebhook
+      );
+      console.log(senderWebhook);
+    } else if (webhook.event.startsWith('document')) {
+      const documentWebhook = apiClient.parseResponseString(
+        webhookContent,
+        BitpesaSdk.DocumentWebhook
+      );
+      console.log(documentWebhook);
+    }
+  } else {
+    console.log("Could not verify webhook signature");
   }
 }
 
