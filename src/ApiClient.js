@@ -419,6 +419,8 @@ export default class ApiClient {
       // set header parameters
       request.set(this.defaultHeaders).set(this.normalizeParams(headerParams));
 
+      request.set("User-Agent","Transferzero-SDK/JavaScript/0.3.0");
+
       // set requestAgent if it is set by user
       if (this.requestAgent) {
         request.agent(this.requestAgent);
