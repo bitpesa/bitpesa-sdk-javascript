@@ -36,7 +36,15 @@ You can find examples in the [examples](https://github.com/bitpesa/bitpesa-sdk-j
 To parse webhooks you can use the following snippet:
 
 ```js
-const webhookContent = '{ (...) }'; // The string received through the webhook callback url
+const webhookHeader = {}; // The webhook headers in json object format received through the webhook callback url
+const webhookContent = '{ (...) }'; // The webhook body in json string received through the webhook callback url
+const webhookUrl = 'http://webhook.url';
+
+const validateRequest = apiClient.validateRequest(webhookUrl, webhookContent, webhookHeader)
+
+if (!validateRequest) {
+   return "Could not validate webhook request headers";
+};
 
 const webhook = apiClient.parseResponseString(webhookContent, Webhook);
 if (webhook.event.startsWith('transaction')) {
@@ -69,6 +77,8 @@ if (webhook.event.startsWith('transaction')) {
     DocumentWebhook
   );
   console.log(documentWebhook);
+} else {
+  console.log("Could not verify webhook signature");
 }
 ```
 

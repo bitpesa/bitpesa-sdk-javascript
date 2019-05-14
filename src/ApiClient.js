@@ -327,14 +327,56 @@ export default class ApiClient {
             request.url + query,
             hash.digest('hex')
         ].join('&');
-        const hmac = crypto.createHmac('sha512', this.apiSecret).update(toSign);
-        const signature = hmac.digest('hex');
+
+        const signature = ApiClient.signRequest(toSign, this.apiSecret)
         request.set({
             'Authorization-Key': this.apiKey,
             'Authorization-Nonce': nonce,
             'Authorization-Signature': signature
         });
         return request;
+    }
+
+    /**
+    * Use the Authorization Signature in the request headers to validate the payload
+    * @param {String} request url
+    * @param {String} bodyJson, string of the request body
+    * @param {Object} headers containing the nonce, signature and key used for authorization
+    * @return boolean
+    */
+    validateRequest(url, bodyJson, headers) {
+        const nonce = headers["Authorization-Nonce"];
+        const signature = headers["Authorization-Signature"]
+        const key = headers["Authorization-Key"]
+        if (nonce == null || signature == null || key !== this.apiKey) {
+            return false;
+        }
+
+        const hash = crypto.createHash('sha512').update(bodyJson);
+
+        const toSign = [
+            nonce,
+            'POST',
+            url,
+            hash.digest('hex')
+        ].join('&');
+
+        const headerSignature = ApiClient.signRequest(toSign, this.apiSecret)
+
+        return (headerSignature === signature)
+    }
+
+    /**
+    * Sign request using HMAC-SHA512 algorithm.
+    * @param {String} paramToSign containing the nonce, request method, url and the hex digest of the request body
+    * @param {String} api secret
+    * @returns Authorization Signature
+    */
+    static signRequest(paramToSign, secret) {
+        const hmac = crypto.createHmac('sha512', secret).update(paramToSign);
+        const signature = hmac.digest('hex');
+
+        return signature
     }
 
     /**
