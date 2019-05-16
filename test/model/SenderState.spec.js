@@ -1,6 +1,6 @@
 /**
- * BitPesa API
- * Reference documentation for the BitPesa API V1
+ * TransferZero API
+ * Reference documentation for the TransferZero API V1
  *
  * OpenAPI spec version: 1.0
  * 
@@ -20,9 +20,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BitpesaSdk);
+    factory(root.expect, root.TransferzeroSdk);
   }
-}(this, function(expect, BitpesaSdk) {
+}(this, function(expect, TransferzeroSdk) {
   'use strict';
 
   var instance;
@@ -49,8 +49,8 @@
   describe('SenderState', function() {
     it('should create an instance of SenderState', function() {
       // uncomment below and update the code to test SenderState
-      //var instane = new BitpesaSdk.SenderState();
-      //expect(instance).to.be.a(BitpesaSdk.SenderState);
+      //var instane = new TransferzeroSdk.SenderState();
+      //expect(instance).to.be.a(TransferzeroSdk.SenderState);
     });
 
   });

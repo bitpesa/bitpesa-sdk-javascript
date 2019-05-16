@@ -1,4 +1,4 @@
-# BitpesaSdk.AccountResponse
+# TransferzeroSdk.AccountResponse
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,6 +1,6 @@
 /**
- * BitPesa API
- * Reference documentation for the BitPesa API V1
+ * TransferZero API
+ * Reference documentation for the TransferZero API V1
  *
  * OpenAPI spec version: 1.0
  * 
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BitpesaSdk);
+    factory(root.expect, root.TransferzeroSdk);
   }
-}(this, function(expect, BitpesaSdk) {
+}(this, function(expect, TransferzeroSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BitpesaSdk.TransactionTraits();
+    instance = new TransferzeroSdk.TransactionTraits();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('TransactionTraits', function() {
     it('should create an instance of TransactionTraits', function() {
       // uncomment below and update the code to test TransactionTraits
-      //var instane = new BitpesaSdk.TransactionTraits();
-      //expect(instance).to.be.a(BitpesaSdk.TransactionTraits);
+      //var instane = new TransferzeroSdk.TransactionTraits();
+      //expect(instance).to.be.a(TransferzeroSdk.TransactionTraits);
     });
 
     it('should have the property autoRefund (base name: "auto_refund")', function() {
       // uncomment below and update the code to test the property autoRefund
-      //var instane = new BitpesaSdk.TransactionTraits();
+      //var instane = new TransferzeroSdk.TransactionTraits();
       //expect(instance).to.be();
     });
 
     it('should have the property accountValidation (base name: "account_validation")', function() {
       // uncomment below and update the code to test the property accountValidation
-      //var instane = new BitpesaSdk.TransactionTraits();
+      //var instane = new TransferzeroSdk.TransactionTraits();
       //expect(instance).to.be();
     });
 

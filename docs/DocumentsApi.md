@@ -1,6 +1,6 @@
-# BitpesaSdk.DocumentsApi
+# TransferzeroSdk.DocumentsApi
 
-All URIs are relative to *https://api-sandbox.bitpesa.co/v1*
+All URIs are relative to *https://api-sandbox.transferzero.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -19,13 +19,13 @@ Returns a single document by the Documents ID
 
 ### Example
 ```javascript
-import { DocumentsApi } from 'bitpesa-sdk';
+import { DocumentsApi } from 'transferzero-sdk';
 
 // Configure API key authorization
 const apiClient = new ApiClient();
 apiClient.apiKey = '<key>';
 apiClient.apiSecret = '<secret>';
-apiClient.basePath = 'https://api-sandbox.bitpesa.co/v1';
+apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
 
 let apiInstance = new DocumentsApi(apiClient);
 
@@ -62,7 +62,7 @@ You can set the API Key and Secret by passing a config object when creating an A
 const apiClient = new ApiClient({
   apiKey: '<key>',
   apiSecret: '<secret>',
-  basePath: 'https://api-sandbox.bitpesa.co/v1'
+  basePath: 'https://api-sandbox.transferzero.com/v1'
 });
 ```
 
@@ -72,7 +72,7 @@ Or by setting the properties on an ApiClient instance:
 const apiClient = new ApiClient();
 apiClient.apiKey = '<key>';
 apiClient.apiSecret = '<secret>';
-apiClient.basePath = 'https://api-sandbox.bitpesa.co/v1';
+apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
 ```
 
 ### HTTP request headers
@@ -90,13 +90,13 @@ Fetches a list of documents.
 
 ### Example
 ```javascript
-import { DocumentsApi } from 'bitpesa-sdk';
+import { DocumentsApi } from 'transferzero-sdk';
 
 // Configure API key authorization
 const apiClient = new ApiClient();
 apiClient.apiKey = '<key>';
 apiClient.apiSecret = '<secret>';
-apiClient.basePath = 'https://api-sandbox.bitpesa.co/v1';
+apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
 
 let apiInstance = new DocumentsApi(apiClient);
 
@@ -138,7 +138,7 @@ You can set the API Key and Secret by passing a config object when creating an A
 const apiClient = new ApiClient({
   apiKey: '<key>',
   apiSecret: '<secret>',
-  basePath: 'https://api-sandbox.bitpesa.co/v1'
+  basePath: 'https://api-sandbox.transferzero.com/v1'
 });
 ```
 
@@ -148,7 +148,7 @@ Or by setting the properties on an ApiClient instance:
 const apiClient = new ApiClient();
 apiClient.apiKey = '<key>';
 apiClient.apiSecret = '<secret>';
-apiClient.basePath = 'https://api-sandbox.bitpesa.co/v1';
+apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
 ```
 
 ### HTTP request headers
@@ -166,13 +166,13 @@ Creates a new document
 
 ### Example
 ```javascript
-import { DocumentsApi } from 'bitpesa-sdk';
+import { DocumentsApi } from 'transferzero-sdk';
 
 // Configure API key authorization
 const apiClient = new ApiClient();
 apiClient.apiKey = '<key>';
 apiClient.apiSecret = '<secret>';
-apiClient.basePath = 'https://api-sandbox.bitpesa.co/v1';
+apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
 
 let apiInstance = new DocumentsApi(apiClient);
 
@@ -209,7 +209,7 @@ You can set the API Key and Secret by passing a config object when creating an A
 const apiClient = new ApiClient({
   apiKey: '<key>',
   apiSecret: '<secret>',
-  basePath: 'https://api-sandbox.bitpesa.co/v1'
+  basePath: 'https://api-sandbox.transferzero.com/v1'
 });
 ```
 
@@ -219,7 +219,7 @@ Or by setting the properties on an ApiClient instance:
 const apiClient = new ApiClient();
 apiClient.apiKey = '<key>';
 apiClient.apiSecret = '<secret>';
-apiClient.basePath = 'https://api-sandbox.bitpesa.co/v1';
+apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
 ```
 
 ### HTTP request headers

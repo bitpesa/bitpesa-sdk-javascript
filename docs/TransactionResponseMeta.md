@@ -1,4 +1,4 @@
-# BitpesaSdk.TransactionResponseMeta
+# TransferzeroSdk.TransactionResponseMeta
 
 ## Properties
 Name | Type | Description | Notes

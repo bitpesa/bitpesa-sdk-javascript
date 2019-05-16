@@ -1,6 +1,6 @@
-# BitpesaSdk.PaymentMethodsApi
+# TransferzeroSdk.PaymentMethodsApi
 
-All URIs are relative to *https://api-sandbox.bitpesa.co/v1*
+All URIs are relative to *https://api-sandbox.transferzero.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -18,13 +18,13 @@ Fetching possible payin methods.
 
 ### Example
 ```javascript
-import { PaymentMethodsApi } from 'bitpesa-sdk';
+import { PaymentMethodsApi } from 'transferzero-sdk';
 
 // Configure API key authorization
 const apiClient = new ApiClient();
 apiClient.apiKey = '<key>';
 apiClient.apiSecret = '<secret>';
-apiClient.basePath = 'https://api-sandbox.bitpesa.co/v1';
+apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
 
 let apiInstance = new PaymentMethodsApi(apiClient);
 apiInstance.paymentMethodsIn().then((data) => {
@@ -57,7 +57,7 @@ You can set the API Key and Secret by passing a config object when creating an A
 const apiClient = new ApiClient({
   apiKey: '<key>',
   apiSecret: '<secret>',
-  basePath: 'https://api-sandbox.bitpesa.co/v1'
+  basePath: 'https://api-sandbox.transferzero.com/v1'
 });
 ```
 
@@ -67,7 +67,7 @@ Or by setting the properties on an ApiClient instance:
 const apiClient = new ApiClient();
 apiClient.apiKey = '<key>';
 apiClient.apiSecret = '<secret>';
-apiClient.basePath = 'https://api-sandbox.bitpesa.co/v1';
+apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
 ```
 
 ### HTTP request headers
@@ -85,13 +85,13 @@ Fetching possible payout methods.
 
 ### Example
 ```javascript
-import { PaymentMethodsApi } from 'bitpesa-sdk';
+import { PaymentMethodsApi } from 'transferzero-sdk';
 
 // Configure API key authorization
 const apiClient = new ApiClient();
 apiClient.apiKey = '<key>';
 apiClient.apiSecret = '<secret>';
-apiClient.basePath = 'https://api-sandbox.bitpesa.co/v1';
+apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
 
 let apiInstance = new PaymentMethodsApi(apiClient);
 apiInstance.paymentMethodsOut().then((data) => {
@@ -124,7 +124,7 @@ You can set the API Key and Secret by passing a config object when creating an A
 const apiClient = new ApiClient({
   apiKey: '<key>',
   apiSecret: '<secret>',
-  basePath: 'https://api-sandbox.bitpesa.co/v1'
+  basePath: 'https://api-sandbox.transferzero.com/v1'
 });
 ```
 
@@ -134,7 +134,7 @@ Or by setting the properties on an ApiClient instance:
 const apiClient = new ApiClient();
 apiClient.apiKey = '<key>';
 apiClient.apiSecret = '<secret>';
-apiClient.basePath = 'https://api-sandbox.bitpesa.co/v1';
+apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
 ```
 
 ### HTTP request headers

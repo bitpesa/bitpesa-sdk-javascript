@@ -1,6 +1,6 @@
 /**
- * BitPesa API
- * Reference documentation for the BitPesa API V1
+ * TransferZero API
+ * Reference documentation for the TransferZero API V1
  *
  * OpenAPI spec version: 1.0
  * 
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BitpesaSdk);
+    factory(root.expect, root.TransferzeroSdk);
   }
-}(this, function(expect, BitpesaSdk) {
+}(this, function(expect, TransferzeroSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BitpesaSdk.FieldValidation();
+    instance = new TransferzeroSdk.FieldValidation();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,25 +50,25 @@
   describe('FieldValidation', function() {
     it('should create an instance of FieldValidation', function() {
       // uncomment below and update the code to test FieldValidation
-      //var instane = new BitpesaSdk.FieldValidation();
-      //expect(instance).to.be.a(BitpesaSdk.FieldValidation);
+      //var instane = new TransferzeroSdk.FieldValidation();
+      //expect(instance).to.be.a(TransferzeroSdk.FieldValidation);
     });
 
     it('should have the property presence (base name: "presence")', function() {
       // uncomment below and update the code to test the property presence
-      //var instane = new BitpesaSdk.FieldValidation();
+      //var instane = new TransferzeroSdk.FieldValidation();
       //expect(instance).to.be();
     });
 
     it('should have the property inclusion (base name: "inclusion")', function() {
       // uncomment below and update the code to test the property inclusion
-      //var instane = new BitpesaSdk.FieldValidation();
+      //var instane = new TransferzeroSdk.FieldValidation();
       //expect(instance).to.be();
     });
 
     it('should have the property format (base name: "format")', function() {
       // uncomment below and update the code to test the property format
-      //var instane = new BitpesaSdk.FieldValidation();
+      //var instane = new TransferzeroSdk.FieldValidation();
       //expect(instance).to.be();
     });
 

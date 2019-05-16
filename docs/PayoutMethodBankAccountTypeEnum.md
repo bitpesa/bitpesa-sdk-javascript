@@ -1,4 +1,4 @@
-# BitpesaSdk.PayoutMethodBankAccountTypeEnum
+# TransferzeroSdk.PayoutMethodBankAccountTypeEnum
 
 ## Enum
 

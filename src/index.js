@@ -1,6 +1,6 @@
 /**
- * BitPesa API
- * Reference documentation for the BitPesa API V1
+ * TransferZero API
+ * Reference documentation for the TransferZero API V1
  *
  * OpenAPI spec version: 1.0
  * 
@@ -123,14 +123,14 @@ import WebhooksApi from './Api/WebhooksApi';
 
 
 /**
-* Client library for BitPesa API.<br>
+* Client library for TransferZero API.<br>
 * The <code>index</code> module provides access to constructors for all the classes which comprise the public API.
 * <p>
 * An AMD (recommended!) or CommonJS application will generally do something equivalent to the following:
 * <pre>
-* var BitpesaSdk = require('index'); // See note below*.
-* var xxxSvc = new BitpesaSdk.XxxApi(); // Allocate the API class we're going to use.
-* var yyyModel = new BitpesaSdk.Yyy(); // Construct a model instance.
+* var TransferzeroSdk = require('index'); // See note below*.
+* var xxxSvc = new TransferzeroSdk.XxxApi(); // Allocate the API class we're going to use.
+* var yyyModel = new TransferzeroSdk.Yyy(); // Construct a model instance.
 * yyyModel.someProperty = 'someValue';
 * ...
 * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
@@ -142,8 +142,8 @@ import WebhooksApi from './Api/WebhooksApi';
 * <p>
 * A non-AMD browser application (discouraged) might do something like this:
 * <pre>
-* var xxxSvc = new BitpesaSdk.XxxApi(); // Allocate the API class we're going to use.
-* var yyy = new BitpesaSdk.Yyy(); // Construct a model instance.
+* var xxxSvc = new TransferzeroSdk.XxxApi(); // Allocate the API class we're going to use.
+* var yyy = new TransferzeroSdk.Yyy(); // Construct a model instance.
 * yyyModel.someProperty = 'someValue';
 * ...
 * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
@@ -151,7 +151,7 @@ import WebhooksApi from './Api/WebhooksApi';
 * </pre>
 * </p>
 * @module index
-* @version 0.3.0
+* @version 1.0.0
 */
 export default {
     /**

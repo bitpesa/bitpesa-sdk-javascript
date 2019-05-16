@@ -1,6 +1,6 @@
 /**
- * BitPesa API
- * Reference documentation for the BitPesa API V1
+ * TransferZero API
+ * Reference documentation for the TransferZero API V1
  *
  * OpenAPI spec version: 1.0
  * 
@@ -20,9 +20,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BitpesaSdk);
+    factory(root.expect, root.TransferzeroSdk);
   }
-}(this, function(expect, BitpesaSdk) {
+}(this, function(expect, TransferzeroSdk) {
   'use strict';
 
   var instance;
@@ -49,8 +49,8 @@
   describe('PayoutMethodBankAccountTypeEnum', function() {
     it('should create an instance of PayoutMethodBankAccountTypeEnum', function() {
       // uncomment below and update the code to test PayoutMethodBankAccountTypeEnum
-      //var instane = new BitpesaSdk.PayoutMethodBankAccountTypeEnum();
-      //expect(instance).to.be.a(BitpesaSdk.PayoutMethodBankAccountTypeEnum);
+      //var instane = new TransferzeroSdk.PayoutMethodBankAccountTypeEnum();
+      //expect(instance).to.be.a(TransferzeroSdk.PayoutMethodBankAccountTypeEnum);
     });
 
   });

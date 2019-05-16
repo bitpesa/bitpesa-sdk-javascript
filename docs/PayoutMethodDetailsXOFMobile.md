@@ -1,4 +1,4 @@
-# BitpesaSdk.PayoutMethodDetailsXOFMobile
+# TransferzeroSdk.PayoutMethodDetailsXOFMobile
 
 ## Properties
 Name | Type | Description | Notes

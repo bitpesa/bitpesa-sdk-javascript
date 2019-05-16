@@ -1,6 +1,6 @@
-# BitpesaSdk.TransactionsApi
+# TransferzeroSdk.TransactionsApi
 
-All URIs are relative to *https://api-sandbox.bitpesa.co/v1*
+All URIs are relative to *https://api-sandbox.transferzero.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -23,13 +23,13 @@ Calculates the input, output and fee amounts for the recipients in a transaction
 
 ### Example
 ```javascript
-import { TransactionsApi } from 'bitpesa-sdk';
+import { TransactionsApi } from 'transferzero-sdk';
 
 // Configure API key authorization
 const apiClient = new ApiClient();
 apiClient.apiKey = '<key>';
 apiClient.apiSecret = '<secret>';
-apiClient.basePath = 'https://api-sandbox.bitpesa.co/v1';
+apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
 
 let apiInstance = new TransactionsApi(apiClient);
 
@@ -66,7 +66,7 @@ You can set the API Key and Secret by passing a config object when creating an A
 const apiClient = new ApiClient({
   apiKey: '<key>',
   apiSecret: '<secret>',
-  basePath: 'https://api-sandbox.bitpesa.co/v1'
+  basePath: 'https://api-sandbox.transferzero.com/v1'
 });
 ```
 
@@ -76,7 +76,7 @@ Or by setting the properties on an ApiClient instance:
 const apiClient = new ApiClient();
 apiClient.apiKey = '<key>';
 apiClient.apiSecret = '<secret>';
-apiClient.basePath = 'https://api-sandbox.bitpesa.co/v1';
+apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
 ```
 
 ### HTTP request headers
@@ -94,13 +94,13 @@ Finds and returns a Transaction created by the requesting API key, using the pro
 
 ### Example
 ```javascript
-import { TransactionsApi } from 'bitpesa-sdk';
+import { TransactionsApi } from 'transferzero-sdk';
 
 // Configure API key authorization
 const apiClient = new ApiClient();
 apiClient.apiKey = '<key>';
 apiClient.apiSecret = '<secret>';
-apiClient.basePath = 'https://api-sandbox.bitpesa.co/v1';
+apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
 
 let apiInstance = new TransactionsApi(apiClient);
 
@@ -137,7 +137,7 @@ You can set the API Key and Secret by passing a config object when creating an A
 const apiClient = new ApiClient({
   apiKey: '<key>',
   apiSecret: '<secret>',
-  basePath: 'https://api-sandbox.bitpesa.co/v1'
+  basePath: 'https://api-sandbox.transferzero.com/v1'
 });
 ```
 
@@ -147,7 +147,7 @@ Or by setting the properties on an ApiClient instance:
 const apiClient = new ApiClient();
 apiClient.apiKey = '<key>';
 apiClient.apiSecret = '<secret>';
-apiClient.basePath = 'https://api-sandbox.bitpesa.co/v1';
+apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
 ```
 
 ### HTTP request headers
@@ -165,13 +165,13 @@ Retrieves a paginated list of the Transactions created by your API key.
 
 ### Example
 ```javascript
-import { TransactionsApi } from 'bitpesa-sdk';
+import { TransactionsApi } from 'transferzero-sdk';
 
 // Configure API key authorization
 const apiClient = new ApiClient();
 apiClient.apiKey = '<key>';
 apiClient.apiSecret = '<secret>';
-apiClient.basePath = 'https://api-sandbox.bitpesa.co/v1';
+apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
 
 let apiInstance = new TransactionsApi(apiClient);
 
@@ -215,7 +215,7 @@ You can set the API Key and Secret by passing a config object when creating an A
 const apiClient = new ApiClient({
   apiKey: '<key>',
   apiSecret: '<secret>',
-  basePath: 'https://api-sandbox.bitpesa.co/v1'
+  basePath: 'https://api-sandbox.transferzero.com/v1'
 });
 ```
 
@@ -225,7 +225,7 @@ Or by setting the properties on an ApiClient instance:
 const apiClient = new ApiClient();
 apiClient.apiKey = '<key>';
 apiClient.apiSecret = '<secret>';
-apiClient.basePath = 'https://api-sandbox.bitpesa.co/v1';
+apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
 ```
 
 ### HTTP request headers
@@ -243,13 +243,13 @@ This method is available only in sandbox environment and is supposed to be used 
 
 ### Example
 ```javascript
-import { TransactionsApi } from 'bitpesa-sdk';
+import { TransactionsApi } from 'transferzero-sdk';
 
 // Configure API key authorization
 const apiClient = new ApiClient();
 apiClient.apiKey = '<key>';
 apiClient.apiSecret = '<secret>';
-apiClient.basePath = 'https://api-sandbox.bitpesa.co/v1';
+apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
 
 let apiInstance = new TransactionsApi(apiClient);
 
@@ -287,7 +287,7 @@ You can set the API Key and Secret by passing a config object when creating an A
 const apiClient = new ApiClient({
   apiKey: '<key>',
   apiSecret: '<secret>',
-  basePath: 'https://api-sandbox.bitpesa.co/v1'
+  basePath: 'https://api-sandbox.transferzero.com/v1'
 });
 ```
 
@@ -297,7 +297,7 @@ Or by setting the properties on an ApiClient instance:
 const apiClient = new ApiClient();
 apiClient.apiKey = '<key>';
 apiClient.apiSecret = '<secret>';
-apiClient.basePath = 'https://api-sandbox.bitpesa.co/v1';
+apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
 ```
 
 ### HTTP request headers
@@ -315,13 +315,13 @@ This method is available only in sandbox environment and is supposed to be used 
 
 ### Example
 ```javascript
-import { TransactionsApi } from 'bitpesa-sdk';
+import { TransactionsApi } from 'transferzero-sdk';
 
 // Configure API key authorization
 const apiClient = new ApiClient();
 apiClient.apiKey = '<key>';
 apiClient.apiSecret = '<secret>';
-apiClient.basePath = 'https://api-sandbox.bitpesa.co/v1';
+apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
 
 let apiInstance = new TransactionsApi(apiClient);
 
@@ -358,7 +358,7 @@ You can set the API Key and Secret by passing a config object when creating an A
 const apiClient = new ApiClient({
   apiKey: '<key>',
   apiSecret: '<secret>',
-  basePath: 'https://api-sandbox.bitpesa.co/v1'
+  basePath: 'https://api-sandbox.transferzero.com/v1'
 });
 ```
 
@@ -368,7 +368,7 @@ Or by setting the properties on an ApiClient instance:
 const apiClient = new ApiClient();
 apiClient.apiKey = '<key>';
 apiClient.apiSecret = '<secret>';
-apiClient.basePath = 'https://api-sandbox.bitpesa.co/v1';
+apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
 ```
 
 ### HTTP request headers
@@ -382,17 +382,17 @@ apiClient.basePath = 'https://api-sandbox.bitpesa.co/v1';
 
 Creates a new transaction
 
-Transactions are the main objects in the BitPesa API, so it&#39;s important to understand how to create and manage them. Transactions facilitate money movement from one Sender in a specific currency to one or multiple Recipients in another currency.  The main flow of a successful transaction flow is the following - - Transaction is created linking the Sender to the Recipient(s) with the requested amounts. - Once the sender is KYC&#39;d and approved the transaction can be funded. - Once the transaction is funded, we will initiate the payout to the recipient(s). - After the recipient (or all recipients) has received the money, the transaction is finished.
+Transactions are the main objects in the TransferZero API, so it&#39;s important to understand how to create and manage them. Transactions facilitate money movement from one Sender in a specific currency to one or multiple Recipients in another currency.  The main flow of a successful transaction flow is the following - - Transaction is created linking the Sender to the Recipient(s) with the requested amounts. - Once the sender is KYC&#39;d and approved the transaction can be funded. - Once the transaction is funded, we will initiate the payout to the recipient(s). - After the recipient (or all recipients) has received the money, the transaction is finished.
 
 ### Example
 ```javascript
-import { TransactionsApi } from 'bitpesa-sdk';
+import { TransactionsApi } from 'transferzero-sdk';
 
 // Configure API key authorization
 const apiClient = new ApiClient();
 apiClient.apiKey = '<key>';
 apiClient.apiSecret = '<secret>';
-apiClient.basePath = 'https://api-sandbox.bitpesa.co/v1';
+apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
 
 let apiInstance = new TransactionsApi(apiClient);
 
@@ -429,7 +429,7 @@ You can set the API Key and Secret by passing a config object when creating an A
 const apiClient = new ApiClient({
   apiKey: '<key>',
   apiSecret: '<secret>',
-  basePath: 'https://api-sandbox.bitpesa.co/v1'
+  basePath: 'https://api-sandbox.transferzero.com/v1'
 });
 ```
 
@@ -439,7 +439,7 @@ Or by setting the properties on an ApiClient instance:
 const apiClient = new ApiClient();
 apiClient.apiKey = '<key>';
 apiClient.apiSecret = '<secret>';
-apiClient.basePath = 'https://api-sandbox.bitpesa.co/v1';
+apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
 ```
 
 ### HTTP request headers
@@ -457,13 +457,13 @@ Validates fields in a transaction payload and displays invalid or missing fields
 
 ### Example
 ```javascript
-import { TransactionsApi } from 'bitpesa-sdk';
+import { TransactionsApi } from 'transferzero-sdk';
 
 // Configure API key authorization
 const apiClient = new ApiClient();
 apiClient.apiKey = '<key>';
 apiClient.apiSecret = '<secret>';
-apiClient.basePath = 'https://api-sandbox.bitpesa.co/v1';
+apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
 
 let apiInstance = new TransactionsApi(apiClient);
 
@@ -500,7 +500,7 @@ You can set the API Key and Secret by passing a config object when creating an A
 const apiClient = new ApiClient({
   apiKey: '<key>',
   apiSecret: '<secret>',
-  basePath: 'https://api-sandbox.bitpesa.co/v1'
+  basePath: 'https://api-sandbox.transferzero.com/v1'
 });
 ```
 
@@ -510,7 +510,7 @@ Or by setting the properties on an ApiClient instance:
 const apiClient = new ApiClient();
 apiClient.apiKey = '<key>';
 apiClient.apiSecret = '<secret>';
-apiClient.basePath = 'https://api-sandbox.bitpesa.co/v1';
+apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
 ```
 
 ### HTTP request headers

@@ -1,4 +1,4 @@
-# BitpesaSdk.WebhookLog
+# TransferzeroSdk.WebhookLog
 
 ## Properties
 Name | Type | Description | Notes

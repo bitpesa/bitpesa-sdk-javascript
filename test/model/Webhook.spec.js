@@ -1,6 +1,6 @@
 /**
- * BitPesa API
- * Reference documentation for the BitPesa API V1
+ * TransferZero API
+ * Reference documentation for the TransferZero API V1
  *
  * OpenAPI spec version: 1.0
  * 
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BitpesaSdk);
+    factory(root.expect, root.TransferzeroSdk);
   }
-}(this, function(expect, BitpesaSdk) {
+}(this, function(expect, TransferzeroSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BitpesaSdk.Webhook();
+    instance = new TransferzeroSdk.Webhook();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,25 +50,25 @@
   describe('Webhook', function() {
     it('should create an instance of Webhook', function() {
       // uncomment below and update the code to test Webhook
-      //var instane = new BitpesaSdk.Webhook();
-      //expect(instance).to.be.a(BitpesaSdk.Webhook);
+      //var instane = new TransferzeroSdk.Webhook();
+      //expect(instance).to.be.a(TransferzeroSdk.Webhook);
     });
 
     it('should have the property webhook (base name: "webhook")', function() {
       // uncomment below and update the code to test the property webhook
-      //var instane = new BitpesaSdk.Webhook();
+      //var instane = new TransferzeroSdk.Webhook();
       //expect(instance).to.be();
     });
 
     it('should have the property event (base name: "event")', function() {
       // uncomment below and update the code to test the property event
-      //var instane = new BitpesaSdk.Webhook();
+      //var instane = new TransferzeroSdk.Webhook();
       //expect(instance).to.be();
     });
 
     it('should have the property _object (base name: "object")', function() {
       // uncomment below and update the code to test the property _object
-      //var instane = new BitpesaSdk.Webhook();
+      //var instane = new TransferzeroSdk.Webhook();
       //expect(instance).to.be();
     });
 

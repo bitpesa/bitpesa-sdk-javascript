@@ -1,4 +1,4 @@
-# BitpesaSdk.DebitListRequest
+# TransferzeroSdk.DebitListRequest
 
 ## Properties
 Name | Type | Description | Notes

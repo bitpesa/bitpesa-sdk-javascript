@@ -1,6 +1,6 @@
 /**
- * BitPesa API
- * Reference documentation for the BitPesa API V1
+ * TransferZero API
+ * Reference documentation for the TransferZero API V1
  *
  * OpenAPI spec version: 1.0
  * 
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BitpesaSdk);
+    factory(root.expect, root.TransferzeroSdk);
   }
-}(this, function(expect, BitpesaSdk) {
+}(this, function(expect, TransferzeroSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BitpesaSdk.PayinMethodDetailsNGNBank();
+    instance = new TransferzeroSdk.PayinMethodDetailsNGNBank();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('PayinMethodDetailsNGNBank', function() {
     it('should create an instance of PayinMethodDetailsNGNBank', function() {
       // uncomment below and update the code to test PayinMethodDetailsNGNBank
-      //var instane = new BitpesaSdk.PayinMethodDetailsNGNBank();
-      //expect(instance).to.be.a(BitpesaSdk.PayinMethodDetailsNGNBank);
+      //var instane = new TransferzeroSdk.PayinMethodDetailsNGNBank();
+      //expect(instance).to.be.a(TransferzeroSdk.PayinMethodDetailsNGNBank);
     });
 
     it('should have the property redirectUrl (base name: "redirect_url")', function() {
       // uncomment below and update the code to test the property redirectUrl
-      //var instane = new BitpesaSdk.PayinMethodDetailsNGNBank();
+      //var instane = new TransferzeroSdk.PayinMethodDetailsNGNBank();
       //expect(instance).to.be();
     });
 

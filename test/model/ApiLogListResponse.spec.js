@@ -1,6 +1,6 @@
 /**
- * BitPesa API
- * Reference documentation for the BitPesa API V1
+ * TransferZero API
+ * Reference documentation for the TransferZero API V1
  *
  * OpenAPI spec version: 1.0
  * 
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BitpesaSdk);
+    factory(root.expect, root.TransferzeroSdk);
   }
-}(this, function(expect, BitpesaSdk) {
+}(this, function(expect, TransferzeroSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BitpesaSdk.ApiLogListResponse();
+    instance = new TransferzeroSdk.ApiLogListResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('ApiLogListResponse', function() {
     it('should create an instance of ApiLogListResponse', function() {
       // uncomment below and update the code to test ApiLogListResponse
-      //var instane = new BitpesaSdk.ApiLogListResponse();
-      //expect(instance).to.be.a(BitpesaSdk.ApiLogListResponse);
+      //var instane = new TransferzeroSdk.ApiLogListResponse();
+      //expect(instance).to.be.a(TransferzeroSdk.ApiLogListResponse);
     });
 
     it('should have the property _object (base name: "object")', function() {
       // uncomment below and update the code to test the property _object
-      //var instane = new BitpesaSdk.ApiLogListResponse();
+      //var instane = new TransferzeroSdk.ApiLogListResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property meta (base name: "meta")', function() {
       // uncomment below and update the code to test the property meta
-      //var instane = new BitpesaSdk.ApiLogListResponse();
+      //var instane = new TransferzeroSdk.ApiLogListResponse();
       //expect(instance).to.be();
     });
 

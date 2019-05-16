@@ -1,4 +1,4 @@
-# BitpesaSdk.SenderRequest
+# TransferzeroSdk.SenderRequest
 
 ## Properties
 Name | Type | Description | Notes

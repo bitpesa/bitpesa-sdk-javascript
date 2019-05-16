@@ -1,4 +1,4 @@
-# BitpesaSdk.PayoutMethodDetailsBalance
+# TransferzeroSdk.PayoutMethodDetailsBalance
 
 ## Properties
 Name | Type | Description | Notes

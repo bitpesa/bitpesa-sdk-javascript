@@ -1,4 +1,4 @@
-# BitpesaSdk.CurrencyExchangeListResponse
+# TransferzeroSdk.CurrencyExchangeListResponse
 
 ## Properties
 Name | Type | Description | Notes

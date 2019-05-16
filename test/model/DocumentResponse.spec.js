@@ -1,6 +1,6 @@
 /**
- * BitPesa API
- * Reference documentation for the BitPesa API V1
+ * TransferZero API
+ * Reference documentation for the TransferZero API V1
  *
  * OpenAPI spec version: 1.0
  * 
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BitpesaSdk);
+    factory(root.expect, root.TransferzeroSdk);
   }
-}(this, function(expect, BitpesaSdk) {
+}(this, function(expect, TransferzeroSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BitpesaSdk.DocumentResponse();
+    instance = new TransferzeroSdk.DocumentResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('DocumentResponse', function() {
     it('should create an instance of DocumentResponse', function() {
       // uncomment below and update the code to test DocumentResponse
-      //var instane = new BitpesaSdk.DocumentResponse();
-      //expect(instance).to.be.a(BitpesaSdk.DocumentResponse);
+      //var instane = new TransferzeroSdk.DocumentResponse();
+      //expect(instance).to.be.a(TransferzeroSdk.DocumentResponse);
     });
 
     it('should have the property _object (base name: "object")', function() {
       // uncomment below and update the code to test the property _object
-      //var instane = new BitpesaSdk.DocumentResponse();
+      //var instane = new TransferzeroSdk.DocumentResponse();
       //expect(instance).to.be();
     });
 

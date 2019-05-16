@@ -1,6 +1,6 @@
 /**
- * BitPesa API
- * Reference documentation for the BitPesa API V1
+ * TransferZero API
+ * Reference documentation for the TransferZero API V1
  *
  * OpenAPI spec version: 1.0
  * 
@@ -18,7 +18,7 @@ import PayinMethodDetailsNGNBank from './PayinMethodDetailsNGNBank';
 /**
  * The PayinMethodDetails model module.
  * @module Model/PayinMethodDetails
- * @version 0.3.0
+ * @version 1.0.0
  */
 class PayinMethodDetails {
     /**

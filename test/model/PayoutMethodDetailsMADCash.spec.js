@@ -1,6 +1,6 @@
 /**
- * BitPesa API
- * Reference documentation for the BitPesa API V1
+ * TransferZero API
+ * Reference documentation for the TransferZero API V1
  *
  * OpenAPI spec version: 1.0
  * 
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BitpesaSdk);
+    factory(root.expect, root.TransferzeroSdk);
   }
-}(this, function(expect, BitpesaSdk) {
+}(this, function(expect, TransferzeroSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BitpesaSdk.PayoutMethodDetailsMADCash();
+    instance = new TransferzeroSdk.PayoutMethodDetailsMADCash();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,73 +50,73 @@
   describe('PayoutMethodDetailsMADCash', function() {
     it('should create an instance of PayoutMethodDetailsMADCash', function() {
       // uncomment below and update the code to test PayoutMethodDetailsMADCash
-      //var instane = new BitpesaSdk.PayoutMethodDetailsMADCash();
-      //expect(instance).to.be.a(BitpesaSdk.PayoutMethodDetailsMADCash);
+      //var instane = new TransferzeroSdk.PayoutMethodDetailsMADCash();
+      //expect(instance).to.be.a(TransferzeroSdk.PayoutMethodDetailsMADCash);
     });
 
     it('should have the property firstName (base name: "first_name")', function() {
       // uncomment below and update the code to test the property firstName
-      //var instane = new BitpesaSdk.PayoutMethodDetailsMADCash();
+      //var instane = new TransferzeroSdk.PayoutMethodDetailsMADCash();
       //expect(instance).to.be();
     });
 
     it('should have the property lastName (base name: "last_name")', function() {
       // uncomment below and update the code to test the property lastName
-      //var instane = new BitpesaSdk.PayoutMethodDetailsMADCash();
+      //var instane = new TransferzeroSdk.PayoutMethodDetailsMADCash();
       //expect(instance).to.be();
     });
 
     it('should have the property phoneNumber (base name: "phone_number")', function() {
       // uncomment below and update the code to test the property phoneNumber
-      //var instane = new BitpesaSdk.PayoutMethodDetailsMADCash();
+      //var instane = new TransferzeroSdk.PayoutMethodDetailsMADCash();
       //expect(instance).to.be();
     });
 
     it('should have the property senderIdentityCardType (base name: "sender_identity_card_type")', function() {
       // uncomment below and update the code to test the property senderIdentityCardType
-      //var instane = new BitpesaSdk.PayoutMethodDetailsMADCash();
+      //var instane = new TransferzeroSdk.PayoutMethodDetailsMADCash();
       //expect(instance).to.be();
     });
 
     it('should have the property senderIdentityCardId (base name: "sender_identity_card_id")', function() {
       // uncomment below and update the code to test the property senderIdentityCardId
-      //var instane = new BitpesaSdk.PayoutMethodDetailsMADCash();
+      //var instane = new TransferzeroSdk.PayoutMethodDetailsMADCash();
       //expect(instance).to.be();
     });
 
     it('should have the property senderCityOfBirth (base name: "sender_city_of_birth")', function() {
       // uncomment below and update the code to test the property senderCityOfBirth
-      //var instane = new BitpesaSdk.PayoutMethodDetailsMADCash();
+      //var instane = new TransferzeroSdk.PayoutMethodDetailsMADCash();
       //expect(instance).to.be();
     });
 
     it('should have the property senderCountryOfBirth (base name: "sender_country_of_birth")', function() {
       // uncomment below and update the code to test the property senderCountryOfBirth
-      //var instane = new BitpesaSdk.PayoutMethodDetailsMADCash();
+      //var instane = new TransferzeroSdk.PayoutMethodDetailsMADCash();
       //expect(instance).to.be();
     });
 
     it('should have the property senderGender (base name: "sender_gender")', function() {
       // uncomment below and update the code to test the property senderGender
-      //var instane = new BitpesaSdk.PayoutMethodDetailsMADCash();
+      //var instane = new TransferzeroSdk.PayoutMethodDetailsMADCash();
       //expect(instance).to.be();
     });
 
     it('should have the property reason (base name: "reason")', function() {
       // uncomment below and update the code to test the property reason
-      //var instane = new BitpesaSdk.PayoutMethodDetailsMADCash();
+      //var instane = new TransferzeroSdk.PayoutMethodDetailsMADCash();
       //expect(instance).to.be();
     });
 
     it('should have the property identityCardType (base name: "identity_card_type")', function() {
       // uncomment below and update the code to test the property identityCardType
-      //var instane = new BitpesaSdk.PayoutMethodDetailsMADCash();
+      //var instane = new TransferzeroSdk.PayoutMethodDetailsMADCash();
       //expect(instance).to.be();
     });
 
     it('should have the property identityCardId (base name: "identity_card_id")', function() {
       // uncomment below and update the code to test the property identityCardId
-      //var instane = new BitpesaSdk.PayoutMethodDetailsMADCash();
+      //var instane = new TransferzeroSdk.PayoutMethodDetailsMADCash();
       //expect(instance).to.be();
     });
 

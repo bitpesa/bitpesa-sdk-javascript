@@ -1,4 +1,4 @@
-# BitpesaSdk.TransactionState
+# TransferzeroSdk.TransactionState
 
 ## Enum
 

@@ -1,6 +1,6 @@
 /**
- * BitPesa API
- * Reference documentation for the BitPesa API V1
+ * TransferZero API
+ * Reference documentation for the TransferZero API V1
  *
  * OpenAPI spec version: 1.0
  * 
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BitpesaSdk);
+    factory(root.expect, root.TransferzeroSdk);
   }
-}(this, function(expect, BitpesaSdk) {
+}(this, function(expect, TransferzeroSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BitpesaSdk.CurrencyOpposite();
+    instance = new TransferzeroSdk.CurrencyOpposite();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('CurrencyOpposite', function() {
     it('should create an instance of CurrencyOpposite', function() {
       // uncomment below and update the code to test CurrencyOpposite
-      //var instane = new BitpesaSdk.CurrencyOpposite();
-      //expect(instance).to.be.a(BitpesaSdk.CurrencyOpposite);
+      //var instane = new TransferzeroSdk.CurrencyOpposite();
+      //expect(instance).to.be.a(TransferzeroSdk.CurrencyOpposite);
     });
 
     it('should have the property rate (base name: "rate")', function() {
       // uncomment below and update the code to test the property rate
-      //var instane = new BitpesaSdk.CurrencyOpposite();
+      //var instane = new TransferzeroSdk.CurrencyOpposite();
       //expect(instance).to.be();
     });
 

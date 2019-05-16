@@ -1,6 +1,6 @@
 /**
- * BitPesa API
- * Reference documentation for the BitPesa API V1
+ * TransferZero API
+ * Reference documentation for the TransferZero API V1
  *
  * OpenAPI spec version: 1.0
  * 
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BitpesaSdk);
+    factory(root.expect, root.TransferzeroSdk);
   }
-}(this, function(expect, BitpesaSdk) {
+}(this, function(expect, TransferzeroSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BitpesaSdk.ApiLog();
+    instance = new TransferzeroSdk.ApiLog();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,61 +50,61 @@
   describe('ApiLog', function() {
     it('should create an instance of ApiLog', function() {
       // uncomment below and update the code to test ApiLog
-      //var instane = new BitpesaSdk.ApiLog();
-      //expect(instance).to.be.a(BitpesaSdk.ApiLog);
+      //var instane = new TransferzeroSdk.ApiLog();
+      //expect(instance).to.be.a(TransferzeroSdk.ApiLog);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new BitpesaSdk.ApiLog();
+      //var instane = new TransferzeroSdk.ApiLog();
       //expect(instance).to.be();
     });
 
     it('should have the property requestMethod (base name: "request_method")', function() {
       // uncomment below and update the code to test the property requestMethod
-      //var instane = new BitpesaSdk.ApiLog();
+      //var instane = new TransferzeroSdk.ApiLog();
       //expect(instance).to.be();
     });
 
     it('should have the property requestUrl (base name: "request_url")', function() {
       // uncomment below and update the code to test the property requestUrl
-      //var instane = new BitpesaSdk.ApiLog();
+      //var instane = new TransferzeroSdk.ApiLog();
       //expect(instance).to.be();
     });
 
     it('should have the property requestBody (base name: "request_body")', function() {
       // uncomment below and update the code to test the property requestBody
-      //var instane = new BitpesaSdk.ApiLog();
+      //var instane = new TransferzeroSdk.ApiLog();
       //expect(instance).to.be();
     });
 
     it('should have the property requestHeaders (base name: "request_headers")', function() {
       // uncomment below and update the code to test the property requestHeaders
-      //var instane = new BitpesaSdk.ApiLog();
+      //var instane = new TransferzeroSdk.ApiLog();
       //expect(instance).to.be();
     });
 
     it('should have the property responseStatus (base name: "response_status")', function() {
       // uncomment below and update the code to test the property responseStatus
-      //var instane = new BitpesaSdk.ApiLog();
+      //var instane = new TransferzeroSdk.ApiLog();
       //expect(instance).to.be();
     });
 
     it('should have the property responseBody (base name: "response_body")', function() {
       // uncomment below and update the code to test the property responseBody
-      //var instane = new BitpesaSdk.ApiLog();
+      //var instane = new TransferzeroSdk.ApiLog();
       //expect(instance).to.be();
     });
 
     it('should have the property responseHeaders (base name: "response_headers")', function() {
       // uncomment below and update the code to test the property responseHeaders
-      //var instane = new BitpesaSdk.ApiLog();
+      //var instane = new TransferzeroSdk.ApiLog();
       //expect(instance).to.be();
     });
 
     it('should have the property createdAt (base name: "created_at")', function() {
       // uncomment below and update the code to test the property createdAt
-      //var instane = new BitpesaSdk.ApiLog();
+      //var instane = new TransferzeroSdk.ApiLog();
       //expect(instance).to.be();
     });
 

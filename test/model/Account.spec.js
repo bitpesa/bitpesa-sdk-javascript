@@ -1,6 +1,6 @@
 /**
- * BitPesa API
- * Reference documentation for the BitPesa API V1
+ * TransferZero API
+ * Reference documentation for the TransferZero API V1
  *
  * OpenAPI spec version: 1.0
  * 
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BitpesaSdk);
+    factory(root.expect, root.TransferzeroSdk);
   }
-}(this, function(expect, BitpesaSdk) {
+}(this, function(expect, TransferzeroSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BitpesaSdk.Account();
+    instance = new TransferzeroSdk.Account();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('Account', function() {
     it('should create an instance of Account', function() {
       // uncomment below and update the code to test Account
-      //var instane = new BitpesaSdk.Account();
-      //expect(instance).to.be.a(BitpesaSdk.Account);
+      //var instane = new TransferzeroSdk.Account();
+      //expect(instance).to.be.a(TransferzeroSdk.Account);
     });
 
     it('should have the property amount (base name: "amount")', function() {
       // uncomment below and update the code to test the property amount
-      //var instane = new BitpesaSdk.Account();
+      //var instane = new TransferzeroSdk.Account();
       //expect(instance).to.be();
     });
 
     it('should have the property currency (base name: "currency")', function() {
       // uncomment below and update the code to test the property currency
-      //var instane = new BitpesaSdk.Account();
+      //var instane = new TransferzeroSdk.Account();
       //expect(instance).to.be();
     });
 

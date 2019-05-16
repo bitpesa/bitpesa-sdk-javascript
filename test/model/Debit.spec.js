@@ -1,6 +1,6 @@
 /**
- * BitPesa API
- * Reference documentation for the BitPesa API V1
+ * TransferZero API
+ * Reference documentation for the TransferZero API V1
  *
  * OpenAPI spec version: 1.0
  * 
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BitpesaSdk);
+    factory(root.expect, root.TransferzeroSdk);
   }
-}(this, function(expect, BitpesaSdk) {
+}(this, function(expect, TransferzeroSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BitpesaSdk.Debit();
+    instance = new TransferzeroSdk.Debit();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,67 +50,67 @@
   describe('Debit', function() {
     it('should create an instance of Debit', function() {
       // uncomment below and update the code to test Debit
-      //var instane = new BitpesaSdk.Debit();
-      //expect(instance).to.be.a(BitpesaSdk.Debit);
+      //var instane = new TransferzeroSdk.Debit();
+      //expect(instance).to.be.a(TransferzeroSdk.Debit);
     });
 
     it('should have the property amount (base name: "amount")', function() {
       // uncomment below and update the code to test the property amount
-      //var instane = new BitpesaSdk.Debit();
+      //var instane = new TransferzeroSdk.Debit();
       //expect(instance).to.be();
     });
 
     it('should have the property currency (base name: "currency")', function() {
       // uncomment below and update the code to test the property currency
-      //var instane = new BitpesaSdk.Debit();
+      //var instane = new TransferzeroSdk.Debit();
       //expect(instance).to.be();
     });
 
     it('should have the property toType (base name: "to_type")', function() {
       // uncomment below and update the code to test the property toType
-      //var instane = new BitpesaSdk.Debit();
+      //var instane = new TransferzeroSdk.Debit();
       //expect(instance).to.be();
     });
 
     it('should have the property toId (base name: "to_id")', function() {
       // uncomment below and update the code to test the property toId
-      //var instane = new BitpesaSdk.Debit();
+      //var instane = new TransferzeroSdk.Debit();
       //expect(instance).to.be();
     });
 
     it('should have the property metadata (base name: "metadata")', function() {
       // uncomment below and update the code to test the property metadata
-      //var instane = new BitpesaSdk.Debit();
+      //var instane = new TransferzeroSdk.Debit();
       //expect(instance).to.be();
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new BitpesaSdk.Debit();
+      //var instane = new TransferzeroSdk.Debit();
       //expect(instance).to.be();
     });
 
     it('should have the property createdAt (base name: "created_at")', function() {
       // uncomment below and update the code to test the property createdAt
-      //var instane = new BitpesaSdk.Debit();
+      //var instane = new TransferzeroSdk.Debit();
       //expect(instance).to.be();
     });
 
     it('should have the property usdAmount (base name: "usd_amount")', function() {
       // uncomment below and update the code to test the property usdAmount
-      //var instane = new BitpesaSdk.Debit();
+      //var instane = new TransferzeroSdk.Debit();
       //expect(instance).to.be();
     });
 
     it('should have the property runningBalance (base name: "running_balance")', function() {
       // uncomment below and update the code to test the property runningBalance
-      //var instane = new BitpesaSdk.Debit();
+      //var instane = new TransferzeroSdk.Debit();
       //expect(instance).to.be();
     });
 
     it('should have the property errors (base name: "errors")', function() {
       // uncomment below and update the code to test the property errors
-      //var instane = new BitpesaSdk.Debit();
+      //var instane = new TransferzeroSdk.Debit();
       //expect(instance).to.be();
     });
 

@@ -1,6 +1,6 @@
 /**
- * BitPesa API
- * Reference documentation for the BitPesa API V1
+ * TransferZero API
+ * Reference documentation for the TransferZero API V1
  *
  * OpenAPI spec version: 1.0
  * 
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BitpesaSdk);
+    factory(root.expect, root.TransferzeroSdk);
   }
-}(this, function(expect, BitpesaSdk) {
+}(this, function(expect, TransferzeroSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BitpesaSdk.PayinMethodRequest();
+    instance = new TransferzeroSdk.PayinMethodRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('PayinMethodRequest', function() {
     it('should create an instance of PayinMethodRequest', function() {
       // uncomment below and update the code to test PayinMethodRequest
-      //var instane = new BitpesaSdk.PayinMethodRequest();
-      //expect(instance).to.be.a(BitpesaSdk.PayinMethodRequest);
+      //var instane = new TransferzeroSdk.PayinMethodRequest();
+      //expect(instance).to.be.a(TransferzeroSdk.PayinMethodRequest);
     });
 
     it('should have the property payinMethod (base name: "payin_method")', function() {
       // uncomment below and update the code to test the property payinMethod
-      //var instane = new BitpesaSdk.PayinMethodRequest();
+      //var instane = new TransferzeroSdk.PayinMethodRequest();
       //expect(instance).to.be();
     });
 

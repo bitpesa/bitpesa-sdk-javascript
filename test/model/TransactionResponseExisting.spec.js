@@ -1,6 +1,6 @@
 /**
- * BitPesa API
- * Reference documentation for the BitPesa API V1
+ * TransferZero API
+ * Reference documentation for the TransferZero API V1
  *
  * OpenAPI spec version: 1.0
  * 
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BitpesaSdk);
+    factory(root.expect, root.TransferzeroSdk);
   }
-}(this, function(expect, BitpesaSdk) {
+}(this, function(expect, TransferzeroSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BitpesaSdk.TransactionResponseExisting();
+    instance = new TransferzeroSdk.TransactionResponseExisting();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('TransactionResponseExisting', function() {
     it('should create an instance of TransactionResponseExisting', function() {
       // uncomment below and update the code to test TransactionResponseExisting
-      //var instane = new BitpesaSdk.TransactionResponseExisting();
-      //expect(instance).to.be.a(BitpesaSdk.TransactionResponseExisting);
+      //var instane = new TransferzeroSdk.TransactionResponseExisting();
+      //expect(instance).to.be.a(TransferzeroSdk.TransactionResponseExisting);
     });
 
     it('should have the property sender (base name: "sender")', function() {
       // uncomment below and update the code to test the property sender
-      //var instane = new BitpesaSdk.TransactionResponseExisting();
+      //var instane = new TransferzeroSdk.TransactionResponseExisting();
       //expect(instance).to.be();
     });
 
     it('should have the property transaction (base name: "transaction")', function() {
       // uncomment below and update the code to test the property transaction
-      //var instane = new BitpesaSdk.TransactionResponseExisting();
+      //var instane = new TransferzeroSdk.TransactionResponseExisting();
       //expect(instance).to.be();
     });
 

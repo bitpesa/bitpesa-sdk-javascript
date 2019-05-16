@@ -1,4 +1,4 @@
-# BitpesaSdk.PayinMethodDetailsNGNBank
+# TransferzeroSdk.PayinMethodDetailsNGNBank
 
 ## Properties
 Name | Type | Description | Notes

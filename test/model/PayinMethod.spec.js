@@ -1,6 +1,6 @@
 /**
- * BitPesa API
- * Reference documentation for the BitPesa API V1
+ * TransferZero API
+ * Reference documentation for the TransferZero API V1
  *
  * OpenAPI spec version: 1.0
  * 
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BitpesaSdk);
+    factory(root.expect, root.TransferzeroSdk);
   }
-}(this, function(expect, BitpesaSdk) {
+}(this, function(expect, TransferzeroSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BitpesaSdk.PayinMethod();
+    instance = new TransferzeroSdk.PayinMethod();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,37 +50,37 @@
   describe('PayinMethod', function() {
     it('should create an instance of PayinMethod', function() {
       // uncomment below and update the code to test PayinMethod
-      //var instane = new BitpesaSdk.PayinMethod();
-      //expect(instance).to.be.a(BitpesaSdk.PayinMethod);
+      //var instane = new TransferzeroSdk.PayinMethod();
+      //expect(instance).to.be.a(TransferzeroSdk.PayinMethod);
     });
 
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
-      //var instane = new BitpesaSdk.PayinMethod();
+      //var instane = new TransferzeroSdk.PayinMethod();
       //expect(instance).to.be();
     });
 
     it('should have the property inDetails (base name: "in_details")', function() {
       // uncomment below and update the code to test the property inDetails
-      //var instane = new BitpesaSdk.PayinMethod();
+      //var instane = new TransferzeroSdk.PayinMethod();
       //expect(instance).to.be();
     });
 
     it('should have the property outDetails (base name: "out_details")', function() {
       // uncomment below and update the code to test the property outDetails
-      //var instane = new BitpesaSdk.PayinMethod();
+      //var instane = new TransferzeroSdk.PayinMethod();
       //expect(instance).to.be();
     });
 
     it('should have the property instructions (base name: "instructions")', function() {
       // uncomment below and update the code to test the property instructions
-      //var instane = new BitpesaSdk.PayinMethod();
+      //var instane = new TransferzeroSdk.PayinMethod();
       //expect(instance).to.be();
     });
 
     it('should have the property provider (base name: "provider")', function() {
       // uncomment below and update the code to test the property provider
-      //var instane = new BitpesaSdk.PayinMethod();
+      //var instane = new TransferzeroSdk.PayinMethod();
       //expect(instance).to.be();
     });
 

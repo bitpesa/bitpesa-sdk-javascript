@@ -1,4 +1,4 @@
-# BitpesaSdk.AccountValidationRequest
+# TransferzeroSdk.AccountValidationRequest
 
 ## Properties
 Name | Type | Description | Notes

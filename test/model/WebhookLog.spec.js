@@ -1,6 +1,6 @@
 /**
- * BitPesa API
- * Reference documentation for the BitPesa API V1
+ * TransferZero API
+ * Reference documentation for the TransferZero API V1
  *
  * OpenAPI spec version: 1.0
  * 
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BitpesaSdk);
+    factory(root.expect, root.TransferzeroSdk);
   }
-}(this, function(expect, BitpesaSdk) {
+}(this, function(expect, TransferzeroSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BitpesaSdk.WebhookLog();
+    instance = new TransferzeroSdk.WebhookLog();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,43 +50,43 @@
   describe('WebhookLog', function() {
     it('should create an instance of WebhookLog', function() {
       // uncomment below and update the code to test WebhookLog
-      //var instane = new BitpesaSdk.WebhookLog();
-      //expect(instance).to.be.a(BitpesaSdk.WebhookLog);
+      //var instane = new TransferzeroSdk.WebhookLog();
+      //expect(instance).to.be.a(TransferzeroSdk.WebhookLog);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new BitpesaSdk.WebhookLog();
+      //var instane = new TransferzeroSdk.WebhookLog();
       //expect(instance).to.be();
     });
 
     it('should have the property message (base name: "message")', function() {
       // uncomment below and update the code to test the property message
-      //var instane = new BitpesaSdk.WebhookLog();
+      //var instane = new TransferzeroSdk.WebhookLog();
       //expect(instance).to.be();
     });
 
     it('should have the property metadata (base name: "metadata")', function() {
       // uncomment below and update the code to test the property metadata
-      //var instane = new BitpesaSdk.WebhookLog();
+      //var instane = new TransferzeroSdk.WebhookLog();
       //expect(instance).to.be();
     });
 
     it('should have the property createdAt (base name: "created_at")', function() {
       // uncomment below and update the code to test the property createdAt
-      //var instane = new BitpesaSdk.WebhookLog();
+      //var instane = new TransferzeroSdk.WebhookLog();
       //expect(instance).to.be();
     });
 
     it('should have the property parentId (base name: "parent_id")', function() {
       // uncomment below and update the code to test the property parentId
-      //var instane = new BitpesaSdk.WebhookLog();
+      //var instane = new TransferzeroSdk.WebhookLog();
       //expect(instance).to.be();
     });
 
     it('should have the property parentType (base name: "parent_type")', function() {
       // uncomment below and update the code to test the property parentType
-      //var instane = new BitpesaSdk.WebhookLog();
+      //var instane = new TransferzeroSdk.WebhookLog();
       //expect(instance).to.be();
     });
 

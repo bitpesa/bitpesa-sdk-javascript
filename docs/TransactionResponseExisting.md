@@ -1,4 +1,4 @@
-# BitpesaSdk.TransactionResponseExisting
+# TransferzeroSdk.TransactionResponseExisting
 
 ## Properties
 Name | Type | Description | Notes

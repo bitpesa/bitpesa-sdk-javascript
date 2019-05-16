@@ -1,4 +1,4 @@
-# BitpesaSdk.PaymentMethod
+# TransferzeroSdk.PaymentMethod
 
 ## Properties
 Name | Type | Description | Notes

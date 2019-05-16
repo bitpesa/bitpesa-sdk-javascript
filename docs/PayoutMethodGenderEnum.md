@@ -1,4 +1,4 @@
-# BitpesaSdk.PayoutMethodGenderEnum
+# TransferzeroSdk.PayoutMethodGenderEnum
 
 ## Enum
 

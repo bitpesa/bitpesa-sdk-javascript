@@ -1,4 +1,4 @@
-# BitpesaSdk.RecipientWebhook
+# TransferzeroSdk.RecipientWebhook
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# BitpesaSdk.RecipientListResponse
+# TransferzeroSdk.RecipientListResponse
 
 ## Properties
 Name | Type | Description | Notes

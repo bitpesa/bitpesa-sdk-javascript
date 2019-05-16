@@ -1,6 +1,6 @@
 /**
- * BitPesa API
- * Reference documentation for the BitPesa API V1
+ * TransferZero API
+ * Reference documentation for the TransferZero API V1
  *
  * OpenAPI spec version: 1.0
  * 
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BitpesaSdk);
+    factory(root.expect, root.TransferzeroSdk);
   }
-}(this, function(expect, BitpesaSdk) {
+}(this, function(expect, TransferzeroSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BitpesaSdk.FieldSelectValidation();
+    instance = new TransferzeroSdk.FieldSelectValidation();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('FieldSelectValidation', function() {
     it('should create an instance of FieldSelectValidation', function() {
       // uncomment below and update the code to test FieldSelectValidation
-      //var instane = new BitpesaSdk.FieldSelectValidation();
-      //expect(instance).to.be.a(BitpesaSdk.FieldSelectValidation);
+      //var instane = new TransferzeroSdk.FieldSelectValidation();
+      //expect(instance).to.be.a(TransferzeroSdk.FieldSelectValidation);
     });
 
     it('should have the property _in (base name: "in")', function() {
       // uncomment below and update the code to test the property _in
-      //var instane = new BitpesaSdk.FieldSelectValidation();
+      //var instane = new TransferzeroSdk.FieldSelectValidation();
       //expect(instance).to.be();
     });
 
     it('should have the property allowBlank (base name: "allow_blank")', function() {
       // uncomment below and update the code to test the property allowBlank
-      //var instane = new BitpesaSdk.FieldSelectValidation();
+      //var instane = new TransferzeroSdk.FieldSelectValidation();
       //expect(instance).to.be();
     });
 

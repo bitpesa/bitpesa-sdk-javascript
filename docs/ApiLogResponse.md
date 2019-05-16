@@ -1,4 +1,4 @@
-# BitpesaSdk.ApiLogResponse
+# TransferzeroSdk.ApiLogResponse
 
 ## Properties
 Name | Type | Description | Notes

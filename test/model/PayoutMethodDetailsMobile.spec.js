@@ -1,6 +1,6 @@
 /**
- * BitPesa API
- * Reference documentation for the BitPesa API V1
+ * TransferZero API
+ * Reference documentation for the TransferZero API V1
  *
  * OpenAPI spec version: 1.0
  * 
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BitpesaSdk);
+    factory(root.expect, root.TransferzeroSdk);
   }
-}(this, function(expect, BitpesaSdk) {
+}(this, function(expect, TransferzeroSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BitpesaSdk.PayoutMethodDetailsMobile();
+    instance = new TransferzeroSdk.PayoutMethodDetailsMobile();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,25 +50,25 @@
   describe('PayoutMethodDetailsMobile', function() {
     it('should create an instance of PayoutMethodDetailsMobile', function() {
       // uncomment below and update the code to test PayoutMethodDetailsMobile
-      //var instane = new BitpesaSdk.PayoutMethodDetailsMobile();
-      //expect(instance).to.be.a(BitpesaSdk.PayoutMethodDetailsMobile);
+      //var instane = new TransferzeroSdk.PayoutMethodDetailsMobile();
+      //expect(instance).to.be.a(TransferzeroSdk.PayoutMethodDetailsMobile);
     });
 
     it('should have the property firstName (base name: "first_name")', function() {
       // uncomment below and update the code to test the property firstName
-      //var instane = new BitpesaSdk.PayoutMethodDetailsMobile();
+      //var instane = new TransferzeroSdk.PayoutMethodDetailsMobile();
       //expect(instance).to.be();
     });
 
     it('should have the property lastName (base name: "last_name")', function() {
       // uncomment below and update the code to test the property lastName
-      //var instane = new BitpesaSdk.PayoutMethodDetailsMobile();
+      //var instane = new TransferzeroSdk.PayoutMethodDetailsMobile();
       //expect(instance).to.be();
     });
 
     it('should have the property phoneNumber (base name: "phone_number")', function() {
       // uncomment below and update the code to test the property phoneNumber
-      //var instane = new BitpesaSdk.PayoutMethodDetailsMobile();
+      //var instane = new TransferzeroSdk.PayoutMethodDetailsMobile();
       //expect(instance).to.be();
     });
 

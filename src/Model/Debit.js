@@ -1,6 +1,6 @@
 /**
- * BitPesa API
- * Reference documentation for the BitPesa API V1
+ * TransferZero API
+ * Reference documentation for the TransferZero API V1
  *
  * OpenAPI spec version: 1.0
  * 
@@ -17,12 +17,12 @@ import ValidationErrorDescription from './ValidationErrorDescription';
 /**
  * The Debit model module.
  * @module Model/Debit
- * @version 0.3.0
+ * @version 1.0.0
  */
 class Debit {
     /**
      * Constructs a new <code>Debit</code>.
-     * Debits are used to fund transactions from your internal BitPesa balance.
+     * Debits are used to fund transactions from your internal TransferZero balance.
      * @alias module:Model/Debit
      * @param currency {String} The currency of the amount in 3-character alpha ISO 4217 currency format
      * @param toType {String} Describes what the debit is funding

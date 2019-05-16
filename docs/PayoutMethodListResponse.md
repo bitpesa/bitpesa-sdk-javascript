@@ -1,4 +1,4 @@
-# BitpesaSdk.PayoutMethodListResponse
+# TransferzeroSdk.PayoutMethodListResponse
 
 ## Properties
 Name | Type | Description | Notes

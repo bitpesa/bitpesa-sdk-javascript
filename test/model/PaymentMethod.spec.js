@@ -1,6 +1,6 @@
 /**
- * BitPesa API
- * Reference documentation for the BitPesa API V1
+ * TransferZero API
+ * Reference documentation for the TransferZero API V1
  *
  * OpenAPI spec version: 1.0
  * 
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BitpesaSdk);
+    factory(root.expect, root.TransferzeroSdk);
   }
-}(this, function(expect, BitpesaSdk) {
+}(this, function(expect, TransferzeroSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BitpesaSdk.PaymentMethod();
+    instance = new TransferzeroSdk.PaymentMethod();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,43 +50,43 @@
   describe('PaymentMethod', function() {
     it('should create an instance of PaymentMethod', function() {
       // uncomment below and update the code to test PaymentMethod
-      //var instane = new BitpesaSdk.PaymentMethod();
-      //expect(instance).to.be.a(BitpesaSdk.PaymentMethod);
+      //var instane = new TransferzeroSdk.PaymentMethod();
+      //expect(instance).to.be.a(TransferzeroSdk.PaymentMethod);
     });
 
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
-      //var instane = new BitpesaSdk.PaymentMethod();
+      //var instane = new TransferzeroSdk.PaymentMethod();
       //expect(instance).to.be();
     });
 
     it('should have the property provider (base name: "provider")', function() {
       // uncomment below and update the code to test the property provider
-      //var instane = new BitpesaSdk.PaymentMethod();
+      //var instane = new TransferzeroSdk.PaymentMethod();
       //expect(instance).to.be();
     });
 
     it('should have the property otcPermitted (base name: "otc_permitted")', function() {
       // uncomment below and update the code to test the property otcPermitted
-      //var instane = new BitpesaSdk.PaymentMethod();
+      //var instane = new TransferzeroSdk.PaymentMethod();
       //expect(instance).to.be();
     });
 
     it('should have the property details (base name: "details")', function() {
       // uncomment below and update the code to test the property details
-      //var instane = new BitpesaSdk.PaymentMethod();
+      //var instane = new TransferzeroSdk.PaymentMethod();
       //expect(instance).to.be();
     });
 
     it('should have the property _default (base name: "default")', function() {
       // uncomment below and update the code to test the property _default
-      //var instane = new BitpesaSdk.PaymentMethod();
+      //var instane = new TransferzeroSdk.PaymentMethod();
       //expect(instance).to.be();
     });
 
     it('should have the property fields (base name: "fields")', function() {
       // uncomment below and update the code to test the property fields
-      //var instane = new BitpesaSdk.PaymentMethod();
+      //var instane = new TransferzeroSdk.PaymentMethod();
       //expect(instance).to.be();
     });
 
