@@ -1,4 +1,4 @@
-# BitpesaSdk.AccountMeta
+# TransferzeroSdk.AccountMeta
 
 ## Properties
 Name | Type | Description | Notes

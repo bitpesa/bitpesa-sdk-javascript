@@ -1,10 +1,10 @@
-import BitpesaSdk from 'bitpesa-sdk';
+import TransferZeroSdk from 'transferzero-sdk';
 
 // Please see our documentation at https://github.com/transferzero/api-documentation
 // and the API specification at http://api.transferzero.com/documentation/
 // for more information.
 
-const apiClient = new BitpesaSdk.ApiClient({
+const apiClient = new TransferZeroSdk.ApiClient({
   apiKey: '<key>',
   apiSecret: '<secret>',
   basePath: 'https://api-sandbox.transferzero.com/v1'
@@ -25,13 +25,13 @@ async function accountValidationExample(apiClient) {
   // See https://github.com/transferzero/api-documentation/blob/master/additional-features.md#bank-account-name-enquiry
   // for more information on how this feature can be used
 
-  const request = new BitpesaSdk.AccountValidationRequest();
+  const request = new TransferZeroSdk.AccountValidationRequest();
   request.bank_account = '9040009999999';
   request.bank_code = '190100';
-  request.country = BitpesaSdk.AccountValidationRequest.CountryEnum.GH;
-  request.currency = BitpesaSdk.AccountValidationRequest.CurrencyEnum.GHS;
-  request.method = BitpesaSdk.AccountValidationRequest.MethodEnum.BANK;
-  const api = new BitpesaSdk.AccountValidationApi(apiClient);
+  request.country = TransferZeroSdk.AccountValidationRequest.CountryEnum.GH;
+  request.currency = TransferZeroSdk.AccountValidationRequest.CurrencyEnum.GHS;
+  request.method = TransferZeroSdk.AccountValidationRequest.MethodEnum.BANK;
+  const api = new TransferZeroSdk.AccountValidationApi(apiClient);
   try {
     const response = await api.postAccountValidations(request);
     console.log(response.object);
@@ -50,8 +50,8 @@ async function accountValidationExample(apiClient) {
 async function createSenderExample(apiClient) {
   // For more details on senders please check https://github.com/transferzero/api-documentation/blob/master/transaction-flow.md#sender
 
-  const api = new BitpesaSdk.SendersApi(apiClient);
-  const sender = new BitpesaSdk.Sender();
+  const api = new TransferZeroSdk.SendersApi(apiClient);
+  const sender = new TransferZeroSdk.Sender();
 
   sender.country = 'UG';
   sender.phone_country = 'UG';
@@ -69,7 +69,7 @@ async function createSenderExample(apiClient) {
   sender.external_id = 'EXTSEN-5555';
 
   try {
-    const senderRequest = new BitpesaSdk.SenderRequest();
+    const senderRequest = new TransferZeroSdk.SenderRequest();
     senderRequest.sender = sender;
 
     const senderResponse = await api.postSenders(senderRequest);
@@ -89,12 +89,12 @@ async function createSenderExample(apiClient) {
 async function updateSenderExample(apiClient) {
   // For more details on senders please check https://github.com/transferzero/api-documentation/blob/master/transaction-flow.md#sender
 
-  const api = new BitpesaSdk.SendersApi(apiClient);
-  const sender = new BitpesaSdk.Sender();
+  const api = new TransferZeroSdk.SendersApi(apiClient);
+  const sender = new TransferZeroSdk.Sender();
 
   sender.city = 'London';
   try {
-    const senderRequest = new BitpesaSdk.SenderRequest();
+    const senderRequest = new TransferZeroSdk.SenderRequest();
     senderRequest.sender = sender;
 
     const senderResponse = await api.patchSender(
@@ -117,29 +117,29 @@ async function updateSenderExample(apiClient) {
 async function createTransactionExample(apiClient) {
   // Please check our documentation at https://github.com/transferzero/api-documentation/blob/master/transaction-flow.md
   // for details on how transactions work.
-  const api = new BitpesaSdk.TransactionsApi(apiClient);
-  const transaction = new BitpesaSdk.Transaction();
+  const api = new TransferZeroSdk.TransactionsApi(apiClient);
+  const transaction = new TransferZeroSdk.Transaction();
 
   // When adding a sender to transaction, please use either an id or external_id. Providing both will result in a validation error.
   // Please see our documentation at https://github.com/transferzero/api-documentation/blob/master/transaction-flow.md#sender
-  const sender = new BitpesaSdk.Sender();
+  const sender = new TransferZeroSdk.Sender();
   sender.id = '58754ae1-d2e4-440c-9a81-d290ece2de0d';
 
   // You can find the various payout options at https://github.com/transferzero/api-documentation/blob/master/transaction-flow.md#payout-details
-  const ngnBankDetails = new BitpesaSdk.PayoutMethodDetails();
+  const ngnBankDetails = new TransferZeroSdk.PayoutMethodDetails();
   ngnBankDetails.bank_account = '123456789';
   ngnBankDetails.bank_account_type = '20';
   ngnBankDetails.bank_code = '082';
   ngnBankDetails.first_name = 'First';
   ngnBankDetails.last_name = 'Last';
 
-  const payoutMethod = new BitpesaSdk.PayoutMethod();
+  const payoutMethod = new TransferZeroSdk.PayoutMethod();
   payoutMethod.type = 'NGN::Bank';
   payoutMethod.details = ngnBankDetails;
 
   // Please see https://github.com/transferzero/api-documentation/blob/master/transaction-flow.md#requested-amount-and-currency
   // on what the request amount and currencies do
-  const recipient = new BitpesaSdk.Recipient();
+  const recipient = new TransferZeroSdk.Recipient();
   recipient.requested_amount = 10000;
   recipient.requested_currency = 'NGN';
   recipient.payout_method = payoutMethod;
@@ -154,7 +154,7 @@ async function createTransactionExample(apiClient) {
   transaction.external_id = 'EXTRAN-5555';
 
   try {
-    const transactionRequest = new BitpesaSdk.TransactionRequest();
+    const transactionRequest = new TransferZeroSdk.TransactionRequest();
     transactionRequest.transaction = transaction;
     const transactionResponse = await api.postTransactions(transactionRequest);
     console.log(`Transaction created! ID: ${transactionResponse.object.id}`);
@@ -175,15 +175,15 @@ async function createAndFundTransactionExample(apiClient) {
   if (transactionId != null) {
     // Please see https://github.com/transferzero/api-documentation/blob/master/transaction-flow.md#funding-transactions
     // on details about funding transactions
-    const debit = new BitpesaSdk.Debit();
+    const debit = new TransferZeroSdk.Debit();
     debit.currency = 'GHS';
     debit.to_id = transactionId;
     debit.to_type = 'Transaction';
 
-    const debitRequest = new BitpesaSdk.DebitRequestWrapper();
+    const debitRequest = new TransferZeroSdk.DebitRequestWrapper();
     debitRequest.debit = debit;
 
-    const debitsApi = new BitpesaSdk.AccountDebitsApi(apiClient);
+    const debitsApi = new TransferZeroSdk.AccountDebitsApi(apiClient);
     try {
       const debitListResponse = await debitsApi.postAccountsDebits(
         debitRequest
@@ -207,7 +207,7 @@ async function getTransactionErrorMessageExample(apiClient) {
   // Please see https://github.com/transferzero/api-documentation/blob/master/transaction-flow.md#receiving-error-messages
   // on details about error messages
   const transactionId = 'f94a3af4-0637-4498-9184-7733bf0b8af7';
-  const api = new BitpesaSdk.TransactionsApi(apiClient);
+  const api = new TransferZeroSdk.TransactionsApi(apiClient);
   const transaction = await api.getTransaction(transactionId);
   console.log(
     `Get recipient's state error message: ${
@@ -395,37 +395,37 @@ async function webhookParseExample(apiClient) {
   if (apiClient.validateRequest(webhookUrl, webhookContent, webhookHeader)) {
     const webhook = apiClient.parseResponseString(
       webhookContent,
-      BitpesaSdk.Webhook
+      TransferZeroSdk.Webhook
     );
 
     if (webhook.event.startsWith('transaction')) {
       const transactionWebhook = apiClient.parseResponseString(
         webhookContent,
-        BitpesaSdk.TransactionWebhook
+        TransferZeroSdk.TransactionWebhook
       );
       console.log(transactionWebhook);
     } else if (webhook.event.startsWith('recipient')) {
       const recipientWebhook = apiClient.parseResponseString(
         webhookContent,
-        BitpesaSdk.RecipientWebhook
+        TransferZeroSdk.RecipientWebhook
       );
       console.log(recipientWebhook);
     } else if (webhook.event.startsWith('payout_method')) {
       const payoutMethodWebhook = apiClient.parseResponseString(
         webhookContent,
-        BitpesaSdk.PayoutMethodWebhook
+        TransferZeroSdk.PayoutMethodWebhook
       );
       console.log(payoutMethodWebhook);
     } else if (webhook.event.startsWith('sender')) {
       const senderWebhook = apiClient.parseResponseString(
         webhookContent,
-        BitpesaSdk.SenderWebhook
+        TransferZeroSdk.SenderWebhook
       );
       console.log(senderWebhook);
     } else if (webhook.event.startsWith('document')) {
       const documentWebhook = apiClient.parseResponseString(
         webhookContent,
-        BitpesaSdk.DocumentWebhook
+        TransferZeroSdk.DocumentWebhook
       );
       console.log(documentWebhook);
     }
@@ -435,7 +435,7 @@ async function webhookParseExample(apiClient) {
 }
 
 async function getAccountsExample(apiClient) {
-  const api = new BitpesaSdk.AccountsApi(apiClient);
+  const api = new TransferZeroSdk.AccountsApi(apiClient);
   try {
     const response = await api.getAccounts();
     response.object.forEach(account => console.log(account));
@@ -448,7 +448,7 @@ async function getAccountsExample(apiClient) {
 async function getSendersByExternalId(apiClient) {
   // Find more details on external IDs at https://github.com/transferzero/api-documentation/blob/master/transaction-flow.md#external-id
 
-  const api = new BitpesaSdk.SendersApi(apiClient, {});
+  const api = new TransferZeroSdk.SendersApi(apiClient, {});
   opts = { externalId: 'EXTSEN-5555' };
   try {
     const response = await api.getSenders(opts);
@@ -463,7 +463,7 @@ async function getTransactionsByExternalId(apiClient) {
   // Please see https://github.com/transferzero/api-documentation/blob/master/transaction-flow.md#external-id
   // for more details on external IDs
 
-  const api = new BitpesaSdk.TransactionsApi(apiClient, {});
+  const api = new TransferZeroSdk.TransactionsApi(apiClient, {});
   opts = { externalId: 'EXTRAN-5555' };
   try {
     const response = await api.getTransactions(opts);

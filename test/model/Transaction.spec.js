@@ -1,6 +1,6 @@
 /**
- * BitPesa API
- * Reference documentation for the BitPesa API V1
+ * TransferZero API
+ * Reference documentation for the TransferZero API V1
  *
  * OpenAPI spec version: 1.0
  * 
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BitpesaSdk);
+    factory(root.expect, root.TransferzeroSdk);
   }
-}(this, function(expect, BitpesaSdk) {
+}(this, function(expect, TransferzeroSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BitpesaSdk.Transaction();
+    instance = new TransferzeroSdk.Transaction();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,97 +50,103 @@
   describe('Transaction', function() {
     it('should create an instance of Transaction', function() {
       // uncomment below and update the code to test Transaction
-      //var instane = new BitpesaSdk.Transaction();
-      //expect(instance).to.be.a(BitpesaSdk.Transaction);
+      //var instane = new TransferzeroSdk.Transaction();
+      //expect(instance).to.be.a(TransferzeroSdk.Transaction);
     });
 
     it('should have the property inputCurrency (base name: "input_currency")', function() {
       // uncomment below and update the code to test the property inputCurrency
-      //var instane = new BitpesaSdk.Transaction();
+      //var instane = new TransferzeroSdk.Transaction();
       //expect(instance).to.be();
     });
 
     it('should have the property payinMethods (base name: "payin_methods")', function() {
       // uncomment below and update the code to test the property payinMethods
-      //var instane = new BitpesaSdk.Transaction();
+      //var instane = new TransferzeroSdk.Transaction();
       //expect(instance).to.be();
     });
 
     it('should have the property metadata (base name: "metadata")', function() {
       // uncomment below and update the code to test the property metadata
-      //var instane = new BitpesaSdk.Transaction();
+      //var instane = new TransferzeroSdk.Transaction();
       //expect(instance).to.be();
     });
 
     it('should have the property sender (base name: "sender")', function() {
       // uncomment below and update the code to test the property sender
-      //var instane = new BitpesaSdk.Transaction();
+      //var instane = new TransferzeroSdk.Transaction();
       //expect(instance).to.be();
     });
 
     it('should have the property recipients (base name: "recipients")', function() {
       // uncomment below and update the code to test the property recipients
-      //var instane = new BitpesaSdk.Transaction();
+      //var instane = new TransferzeroSdk.Transaction();
       //expect(instance).to.be();
     });
 
     it('should have the property traits (base name: "traits")', function() {
       // uncomment below and update the code to test the property traits
-      //var instane = new BitpesaSdk.Transaction();
+      //var instane = new TransferzeroSdk.Transaction();
       //expect(instance).to.be();
     });
 
     it('should have the property state (base name: "state")', function() {
       // uncomment below and update the code to test the property state
-      //var instane = new BitpesaSdk.Transaction();
+      //var instane = new TransferzeroSdk.Transaction();
       //expect(instance).to.be();
     });
 
     it('should have the property inputAmount (base name: "input_amount")', function() {
       // uncomment below and update the code to test the property inputAmount
-      //var instane = new BitpesaSdk.Transaction();
+      //var instane = new TransferzeroSdk.Transaction();
       //expect(instance).to.be();
     });
 
     it('should have the property payinReference (base name: "payin_reference")', function() {
       // uncomment below and update the code to test the property payinReference
-      //var instane = new BitpesaSdk.Transaction();
+      //var instane = new TransferzeroSdk.Transaction();
       //expect(instance).to.be();
     });
 
     it('should have the property paidAmount (base name: "paid_amount")', function() {
       // uncomment below and update the code to test the property paidAmount
-      //var instane = new BitpesaSdk.Transaction();
+      //var instane = new TransferzeroSdk.Transaction();
       //expect(instance).to.be();
     });
 
     it('should have the property dueAmount (base name: "due_amount")', function() {
       // uncomment below and update the code to test the property dueAmount
-      //var instane = new BitpesaSdk.Transaction();
+      //var instane = new TransferzeroSdk.Transaction();
       //expect(instance).to.be();
     });
 
     it('should have the property createdAt (base name: "created_at")', function() {
       // uncomment below and update the code to test the property createdAt
-      //var instane = new BitpesaSdk.Transaction();
+      //var instane = new TransferzeroSdk.Transaction();
       //expect(instance).to.be();
     });
 
     it('should have the property expiresAt (base name: "expires_at")', function() {
       // uncomment below and update the code to test the property expiresAt
-      //var instane = new BitpesaSdk.Transaction();
+      //var instane = new TransferzeroSdk.Transaction();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property externalId (base name: "external_id")', function() {
+      // uncomment below and update the code to test the property externalId
+      //var instane = new TransferzeroSdk.Transaction();
       //expect(instance).to.be();
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new BitpesaSdk.Transaction();
+      //var instane = new TransferzeroSdk.Transaction();
       //expect(instance).to.be();
     });
 
     it('should have the property errors (base name: "errors")', function() {
       // uncomment below and update the code to test the property errors
-      //var instane = new BitpesaSdk.Transaction();
+      //var instane = new TransferzeroSdk.Transaction();
       //expect(instance).to.be();
     });
 

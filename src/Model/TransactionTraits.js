@@ -1,6 +1,6 @@
 /**
- * BitPesa API
- * Reference documentation for the BitPesa API V1
+ * TransferZero API
+ * Reference documentation for the TransferZero API V1
  *
  * OpenAPI spec version: 1.0
  * 
@@ -16,12 +16,12 @@ import ApiClient from '../ApiClient';
 /**
  * The TransactionTraits model module.
  * @module Model/TransactionTraits
- * @version 0.3.0
+ * @version 1.0.0
  */
 class TransactionTraits {
     /**
      * Constructs a new <code>TransactionTraits</code>.
-     * Additional features that are enabled on the transaction. For more details please see [Additional features](https://github.com/bitpesa/api-documentation/blob/master/additional-features.md) in our API documentation
+     * Additional features that are enabled on the transaction. For more details please see [Additional features](https://github.com/transferzero/api-documentation/blob/master/additional-features.md) in our API documentation
      * @alias module:Model/TransactionTraits
      */
     constructor() { 
@@ -62,13 +62,13 @@ class TransactionTraits {
 }
 
 /**
- * Enables or disables the auto refund functionality. Please see [Auto cancellation and refund of transactions](https://github.com/bitpesa/api-documentation/blob/master/additional-features.md#auto-cancellation-and-refund-of-transactions) for more details
+ * Enables or disables the auto refund functionality. Please see [Auto cancellation and refund of transactions](https://github.com/transferzero/api-documentation/blob/master/additional-features.md#auto-cancellation-and-refund-of-transactions) for more details
  * @member {Boolean} auto_refund
  */
 TransactionTraits.prototype['auto_refund'] = undefined;
 
 /**
- * Enabled or disables the name validation functionality. Please see [Name validation in transactions](https://github.com/bitpesa/api-documentation/blob/master/additional-features.md#name-validation-in-transactions) for more details
+ * Enabled or disables the name validation functionality. Please see [Name validation in transactions](https://github.com/transferzero/api-documentation/blob/master/additional-features.md#name-validation-in-transactions) for more details
  * @member {Boolean} account_validation
  */
 TransactionTraits.prototype['account_validation'] = undefined;

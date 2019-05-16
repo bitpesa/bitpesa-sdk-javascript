@@ -1,6 +1,6 @@
 /**
- * BitPesa API
- * Reference documentation for the BitPesa API V1
+ * TransferZero API
+ * Reference documentation for the TransferZero API V1
  *
  * OpenAPI spec version: 1.0
  * 
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BitpesaSdk);
+    factory(root.expect, root.TransferzeroSdk);
   }
-}(this, function(expect, BitpesaSdk) {
+}(this, function(expect, TransferzeroSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BitpesaSdk.Document();
+    instance = new TransferzeroSdk.Document();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,67 +50,67 @@
   describe('Document', function() {
     it('should create an instance of Document', function() {
       // uncomment below and update the code to test Document
-      //var instane = new BitpesaSdk.Document();
-      //expect(instance).to.be.a(BitpesaSdk.Document);
+      //var instane = new TransferzeroSdk.Document();
+      //expect(instance).to.be.a(TransferzeroSdk.Document);
     });
 
     it('should have the property upload (base name: "upload")', function() {
       // uncomment below and update the code to test the property upload
-      //var instane = new BitpesaSdk.Document();
+      //var instane = new TransferzeroSdk.Document();
       //expect(instance).to.be();
     });
 
     it('should have the property uploadFileName (base name: "upload_file_name")', function() {
       // uncomment below and update the code to test the property uploadFileName
-      //var instane = new BitpesaSdk.Document();
+      //var instane = new TransferzeroSdk.Document();
       //expect(instance).to.be();
     });
 
     it('should have the property metadata (base name: "metadata")', function() {
       // uncomment below and update the code to test the property metadata
-      //var instane = new BitpesaSdk.Document();
+      //var instane = new TransferzeroSdk.Document();
       //expect(instance).to.be();
     });
 
     it('should have the property uploadContentType (base name: "upload_content_type")', function() {
       // uncomment below and update the code to test the property uploadContentType
-      //var instane = new BitpesaSdk.Document();
+      //var instane = new TransferzeroSdk.Document();
       //expect(instance).to.be();
     });
 
     it('should have the property uploadFileSize (base name: "upload_file_size")', function() {
       // uncomment below and update the code to test the property uploadFileSize
-      //var instane = new BitpesaSdk.Document();
+      //var instane = new TransferzeroSdk.Document();
       //expect(instance).to.be();
     });
 
     it('should have the property category (base name: "category")', function() {
       // uncomment below and update the code to test the property category
-      //var instane = new BitpesaSdk.Document();
+      //var instane = new TransferzeroSdk.Document();
       //expect(instance).to.be();
     });
 
     it('should have the property side (base name: "side")', function() {
       // uncomment below and update the code to test the property side
-      //var instane = new BitpesaSdk.Document();
+      //var instane = new TransferzeroSdk.Document();
       //expect(instance).to.be();
     });
 
     it('should have the property issuingCountry (base name: "issuing_country")', function() {
       // uncomment below and update the code to test the property issuingCountry
-      //var instane = new BitpesaSdk.Document();
+      //var instane = new TransferzeroSdk.Document();
       //expect(instance).to.be();
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new BitpesaSdk.Document();
+      //var instane = new TransferzeroSdk.Document();
       //expect(instance).to.be();
     });
 
     it('should have the property errors (base name: "errors")', function() {
       // uncomment below and update the code to test the property errors
-      //var instane = new BitpesaSdk.Document();
+      //var instane = new TransferzeroSdk.Document();
       //expect(instance).to.be();
     });
 

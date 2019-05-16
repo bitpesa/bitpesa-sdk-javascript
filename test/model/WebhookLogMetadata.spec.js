@@ -1,6 +1,6 @@
 /**
- * BitPesa API
- * Reference documentation for the BitPesa API V1
+ * TransferZero API
+ * Reference documentation for the TransferZero API V1
  *
  * OpenAPI spec version: 1.0
  * 
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BitpesaSdk);
+    factory(root.expect, root.TransferzeroSdk);
   }
-}(this, function(expect, BitpesaSdk) {
+}(this, function(expect, TransferzeroSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BitpesaSdk.WebhookLogMetadata();
+    instance = new TransferzeroSdk.WebhookLogMetadata();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,67 +50,67 @@
   describe('WebhookLogMetadata', function() {
     it('should create an instance of WebhookLogMetadata', function() {
       // uncomment below and update the code to test WebhookLogMetadata
-      //var instane = new BitpesaSdk.WebhookLogMetadata();
-      //expect(instance).to.be.a(BitpesaSdk.WebhookLogMetadata);
+      //var instane = new TransferzeroSdk.WebhookLogMetadata();
+      //expect(instance).to.be.a(TransferzeroSdk.WebhookLogMetadata);
     });
 
     it('should have the property params (base name: "params")', function() {
       // uncomment below and update the code to test the property params
-      //var instane = new BitpesaSdk.WebhookLogMetadata();
+      //var instane = new TransferzeroSdk.WebhookLogMetadata();
       //expect(instance).to.be();
     });
 
     it('should have the property event (base name: "event")', function() {
       // uncomment below and update the code to test the property event
-      //var instane = new BitpesaSdk.WebhookLogMetadata();
+      //var instane = new TransferzeroSdk.WebhookLogMetadata();
       //expect(instance).to.be();
     });
 
     it('should have the property instanceId (base name: "instance_id")', function() {
       // uncomment below and update the code to test the property instanceId
-      //var instane = new BitpesaSdk.WebhookLogMetadata();
+      //var instane = new TransferzeroSdk.WebhookLogMetadata();
       //expect(instance).to.be();
     });
 
     it('should have the property instanceType (base name: "instance_type")', function() {
       // uncomment below and update the code to test the property instanceType
-      //var instane = new BitpesaSdk.WebhookLogMetadata();
+      //var instane = new TransferzeroSdk.WebhookLogMetadata();
       //expect(instance).to.be();
     });
 
     it('should have the property attemptId (base name: "attempt_id")', function() {
       // uncomment below and update the code to test the property attemptId
-      //var instane = new BitpesaSdk.WebhookLogMetadata();
+      //var instane = new TransferzeroSdk.WebhookLogMetadata();
       //expect(instance).to.be();
     });
 
     it('should have the property tries (base name: "tries")', function() {
       // uncomment below and update the code to test the property tries
-      //var instane = new BitpesaSdk.WebhookLogMetadata();
+      //var instane = new TransferzeroSdk.WebhookLogMetadata();
       //expect(instance).to.be();
     });
 
     it('should have the property request (base name: "request")', function() {
       // uncomment below and update the code to test the property request
-      //var instane = new BitpesaSdk.WebhookLogMetadata();
+      //var instane = new TransferzeroSdk.WebhookLogMetadata();
       //expect(instance).to.be();
     });
 
     it('should have the property response (base name: "response")', function() {
       // uncomment below and update the code to test the property response
-      //var instane = new BitpesaSdk.WebhookLogMetadata();
+      //var instane = new TransferzeroSdk.WebhookLogMetadata();
       //expect(instance).to.be();
     });
 
     it('should have the property appId (base name: "app_id")', function() {
       // uncomment below and update the code to test the property appId
-      //var instane = new BitpesaSdk.WebhookLogMetadata();
+      //var instane = new TransferzeroSdk.WebhookLogMetadata();
       //expect(instance).to.be();
     });
 
     it('should have the property apiKeyId (base name: "api_key_id")', function() {
       // uncomment below and update the code to test the property apiKeyId
-      //var instane = new BitpesaSdk.WebhookLogMetadata();
+      //var instane = new TransferzeroSdk.WebhookLogMetadata();
       //expect(instance).to.be();
     });
 

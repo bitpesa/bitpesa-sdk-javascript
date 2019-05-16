@@ -1,6 +1,6 @@
 /**
- * BitPesa API
- * Reference documentation for the BitPesa API V1
+ * TransferZero API
+ * Reference documentation for the TransferZero API V1
  *
  * OpenAPI spec version: 1.0
  * 
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BitpesaSdk);
+    factory(root.expect, root.TransferzeroSdk);
   }
-}(this, function(expect, BitpesaSdk) {
+}(this, function(expect, TransferzeroSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BitpesaSdk.PaginationMeta();
+    instance = new TransferzeroSdk.PaginationMeta();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('PaginationMeta', function() {
     it('should create an instance of PaginationMeta', function() {
       // uncomment below and update the code to test PaginationMeta
-      //var instane = new BitpesaSdk.PaginationMeta();
-      //expect(instance).to.be.a(BitpesaSdk.PaginationMeta);
+      //var instane = new TransferzeroSdk.PaginationMeta();
+      //expect(instance).to.be.a(TransferzeroSdk.PaginationMeta);
     });
 
     it('should have the property pagination (base name: "pagination")', function() {
       // uncomment below and update the code to test the property pagination
-      //var instane = new BitpesaSdk.PaginationMeta();
+      //var instane = new TransferzeroSdk.PaginationMeta();
       //expect(instance).to.be();
     });
 

@@ -1,4 +1,4 @@
-# BitpesaSdk.PayoutMethodRequest
+# TransferzeroSdk.PayoutMethodRequest
 
 ## Properties
 Name | Type | Description | Notes

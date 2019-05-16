@@ -1,4 +1,4 @@
-# BitpesaSdk.PayoutMethodMobileProviderEnum
+# TransferzeroSdk.PayoutMethodMobileProviderEnum
 
 ## Enum
 

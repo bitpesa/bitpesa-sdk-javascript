@@ -1,4 +1,4 @@
-# BitpesaSdk.AccountValidationError
+# TransferzeroSdk.AccountValidationError
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# BitpesaSdk.DocumentResponse
+# TransferzeroSdk.DocumentResponse
 
 ## Properties
 Name | Type | Description | Notes

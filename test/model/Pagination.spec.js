@@ -1,6 +1,6 @@
 /**
- * BitPesa API
- * Reference documentation for the BitPesa API V1
+ * TransferZero API
+ * Reference documentation for the TransferZero API V1
  *
  * OpenAPI spec version: 1.0
  * 
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BitpesaSdk);
+    factory(root.expect, root.TransferzeroSdk);
   }
-}(this, function(expect, BitpesaSdk) {
+}(this, function(expect, TransferzeroSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BitpesaSdk.Pagination();
+    instance = new TransferzeroSdk.Pagination();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,37 +50,37 @@
   describe('Pagination', function() {
     it('should create an instance of Pagination', function() {
       // uncomment below and update the code to test Pagination
-      //var instane = new BitpesaSdk.Pagination();
-      //expect(instance).to.be.a(BitpesaSdk.Pagination);
+      //var instane = new TransferzeroSdk.Pagination();
+      //expect(instance).to.be.a(TransferzeroSdk.Pagination);
     });
 
     it('should have the property currentPage (base name: "current_page")', function() {
       // uncomment below and update the code to test the property currentPage
-      //var instane = new BitpesaSdk.Pagination();
+      //var instane = new TransferzeroSdk.Pagination();
       //expect(instance).to.be();
     });
 
     it('should have the property nextPage (base name: "next_page")', function() {
       // uncomment below and update the code to test the property nextPage
-      //var instane = new BitpesaSdk.Pagination();
+      //var instane = new TransferzeroSdk.Pagination();
       //expect(instance).to.be();
     });
 
     it('should have the property prevPage (base name: "prev_page")', function() {
       // uncomment below and update the code to test the property prevPage
-      //var instane = new BitpesaSdk.Pagination();
+      //var instane = new TransferzeroSdk.Pagination();
       //expect(instance).to.be();
     });
 
     it('should have the property totalPages (base name: "total_pages")', function() {
       // uncomment below and update the code to test the property totalPages
-      //var instane = new BitpesaSdk.Pagination();
+      //var instane = new TransferzeroSdk.Pagination();
       //expect(instance).to.be();
     });
 
     it('should have the property totalCount (base name: "total_count")', function() {
       // uncomment below and update the code to test the property totalCount
-      //var instane = new BitpesaSdk.Pagination();
+      //var instane = new TransferzeroSdk.Pagination();
       //expect(instance).to.be();
     });
 

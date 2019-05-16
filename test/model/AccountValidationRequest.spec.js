@@ -1,6 +1,6 @@
 /**
- * BitPesa API
- * Reference documentation for the BitPesa API V1
+ * TransferZero API
+ * Reference documentation for the TransferZero API V1
  *
  * OpenAPI spec version: 1.0
  * 
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BitpesaSdk);
+    factory(root.expect, root.TransferzeroSdk);
   }
-}(this, function(expect, BitpesaSdk) {
+}(this, function(expect, TransferzeroSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BitpesaSdk.AccountValidationRequest();
+    instance = new TransferzeroSdk.AccountValidationRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,37 +50,37 @@
   describe('AccountValidationRequest', function() {
     it('should create an instance of AccountValidationRequest', function() {
       // uncomment below and update the code to test AccountValidationRequest
-      //var instane = new BitpesaSdk.AccountValidationRequest();
-      //expect(instance).to.be.a(BitpesaSdk.AccountValidationRequest);
+      //var instane = new TransferzeroSdk.AccountValidationRequest();
+      //expect(instance).to.be.a(TransferzeroSdk.AccountValidationRequest);
     });
 
     it('should have the property bankAccount (base name: "bank_account")', function() {
       // uncomment below and update the code to test the property bankAccount
-      //var instane = new BitpesaSdk.AccountValidationRequest();
+      //var instane = new TransferzeroSdk.AccountValidationRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property bankCode (base name: "bank_code")', function() {
       // uncomment below and update the code to test the property bankCode
-      //var instane = new BitpesaSdk.AccountValidationRequest();
+      //var instane = new TransferzeroSdk.AccountValidationRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property country (base name: "country")', function() {
       // uncomment below and update the code to test the property country
-      //var instane = new BitpesaSdk.AccountValidationRequest();
+      //var instane = new TransferzeroSdk.AccountValidationRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property currency (base name: "currency")', function() {
       // uncomment below and update the code to test the property currency
-      //var instane = new BitpesaSdk.AccountValidationRequest();
+      //var instane = new TransferzeroSdk.AccountValidationRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property method (base name: "method")', function() {
       // uncomment below and update the code to test the property method
-      //var instane = new BitpesaSdk.AccountValidationRequest();
+      //var instane = new TransferzeroSdk.AccountValidationRequest();
       //expect(instance).to.be();
     });
 

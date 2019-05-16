@@ -1,4 +1,4 @@
-# BitpesaSdk.WebhookDefinitionEventListResponse
+# TransferzeroSdk.WebhookDefinitionEventListResponse
 
 ## Properties
 Name | Type | Description | Notes

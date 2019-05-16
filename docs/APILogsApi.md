@@ -1,6 +1,6 @@
-# BitpesaSdk.APILogsApi
+# TransferzeroSdk.APILogsApi
 
-All URIs are relative to *https://api-sandbox.bitpesa.co/v1*
+All URIs are relative to *https://api-sandbox.transferzero.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -18,13 +18,13 @@ Returns a single API log based on the API log ID.
 
 ### Example
 ```javascript
-import { APILogsApi } from 'bitpesa-sdk';
+import { APILogsApi } from 'transferzero-sdk';
 
 // Configure API key authorization
 const apiClient = new ApiClient();
 apiClient.apiKey = '<key>';
 apiClient.apiSecret = '<secret>';
-apiClient.basePath = 'https://api-sandbox.bitpesa.co/v1';
+apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
 
 let apiInstance = new APILogsApi(apiClient);
 
@@ -61,7 +61,7 @@ You can set the API Key and Secret by passing a config object when creating an A
 const apiClient = new ApiClient({
   apiKey: '<key>',
   apiSecret: '<secret>',
-  basePath: 'https://api-sandbox.bitpesa.co/v1'
+  basePath: 'https://api-sandbox.transferzero.com/v1'
 });
 ```
 
@@ -71,7 +71,7 @@ Or by setting the properties on an ApiClient instance:
 const apiClient = new ApiClient();
 apiClient.apiKey = '<key>';
 apiClient.apiSecret = '<secret>';
-apiClient.basePath = 'https://api-sandbox.bitpesa.co/v1';
+apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
 ```
 
 ### HTTP request headers
@@ -89,13 +89,13 @@ Returns a list of API logs. Also includes information relating to the original r
 
 ### Example
 ```javascript
-import { APILogsApi } from 'bitpesa-sdk';
+import { APILogsApi } from 'transferzero-sdk';
 
 // Configure API key authorization
 const apiClient = new ApiClient();
 apiClient.apiKey = '<key>';
 apiClient.apiSecret = '<secret>';
-apiClient.basePath = 'https://api-sandbox.bitpesa.co/v1';
+apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
 
 let apiInstance = new APILogsApi(apiClient);
 
@@ -141,7 +141,7 @@ You can set the API Key and Secret by passing a config object when creating an A
 const apiClient = new ApiClient({
   apiKey: '<key>',
   apiSecret: '<secret>',
-  basePath: 'https://api-sandbox.bitpesa.co/v1'
+  basePath: 'https://api-sandbox.transferzero.com/v1'
 });
 ```
 
@@ -151,7 +151,7 @@ Or by setting the properties on an ApiClient instance:
 const apiClient = new ApiClient();
 apiClient.apiKey = '<key>';
 apiClient.apiSecret = '<secret>';
-apiClient.basePath = 'https://api-sandbox.bitpesa.co/v1';
+apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
 ```
 
 ### HTTP request headers

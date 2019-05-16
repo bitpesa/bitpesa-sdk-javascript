@@ -1,4 +1,4 @@
-# BitpesaSdk.FieldValidation
+# TransferzeroSdk.FieldValidation
 
 ## Properties
 Name | Type | Description | Notes

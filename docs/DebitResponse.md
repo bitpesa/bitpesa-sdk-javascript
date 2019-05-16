@@ -1,4 +1,4 @@
-# BitpesaSdk.DebitResponse
+# TransferzeroSdk.DebitResponse
 
 ## Properties
 Name | Type | Description | Notes

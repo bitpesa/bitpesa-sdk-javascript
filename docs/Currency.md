@@ -1,4 +1,4 @@
-# BitpesaSdk.Currency
+# TransferzeroSdk.Currency
 
 ## Properties
 Name | Type | Description | Notes

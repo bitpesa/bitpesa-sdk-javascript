@@ -1,6 +1,6 @@
 /**
- * BitPesa API
- * Reference documentation for the BitPesa API V1
+ * TransferZero API
+ * Reference documentation for the TransferZero API V1
  *
  * OpenAPI spec version: 1.0
  * 
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BitpesaSdk);
+    factory(root.expect, root.TransferzeroSdk);
   }
-}(this, function(expect, BitpesaSdk) {
+}(this, function(expect, TransferzeroSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BitpesaSdk.Sender();
+    instance = new TransferzeroSdk.Sender();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,157 +50,163 @@
   describe('Sender', function() {
     it('should create an instance of Sender', function() {
       // uncomment below and update the code to test Sender
-      //var instane = new BitpesaSdk.Sender();
-      //expect(instance).to.be.a(BitpesaSdk.Sender);
+      //var instane = new TransferzeroSdk.Sender();
+      //expect(instance).to.be.a(TransferzeroSdk.Sender);
     });
 
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
-      //var instane = new BitpesaSdk.Sender();
+      //var instane = new TransferzeroSdk.Sender();
       //expect(instance).to.be();
     });
 
     it('should have the property country (base name: "country")', function() {
       // uncomment below and update the code to test the property country
-      //var instane = new BitpesaSdk.Sender();
+      //var instane = new TransferzeroSdk.Sender();
       //expect(instance).to.be();
     });
 
     it('should have the property phoneCountry (base name: "phone_country")', function() {
       // uncomment below and update the code to test the property phoneCountry
-      //var instane = new BitpesaSdk.Sender();
+      //var instane = new TransferzeroSdk.Sender();
       //expect(instance).to.be();
     });
 
     it('should have the property phoneNumber (base name: "phone_number")', function() {
       // uncomment below and update the code to test the property phoneNumber
-      //var instane = new BitpesaSdk.Sender();
+      //var instane = new TransferzeroSdk.Sender();
       //expect(instance).to.be();
     });
 
     it('should have the property email (base name: "email")', function() {
       // uncomment below and update the code to test the property email
-      //var instane = new BitpesaSdk.Sender();
+      //var instane = new TransferzeroSdk.Sender();
       //expect(instance).to.be();
     });
 
     it('should have the property firstName (base name: "first_name")', function() {
       // uncomment below and update the code to test the property firstName
-      //var instane = new BitpesaSdk.Sender();
+      //var instane = new TransferzeroSdk.Sender();
       //expect(instance).to.be();
     });
 
     it('should have the property middleName (base name: "middle_name")', function() {
       // uncomment below and update the code to test the property middleName
-      //var instane = new BitpesaSdk.Sender();
+      //var instane = new TransferzeroSdk.Sender();
       //expect(instance).to.be();
     });
 
     it('should have the property lastName (base name: "last_name")', function() {
       // uncomment below and update the code to test the property lastName
-      //var instane = new BitpesaSdk.Sender();
+      //var instane = new TransferzeroSdk.Sender();
       //expect(instance).to.be();
     });
 
     it('should have the property occupation (base name: "occupation")', function() {
       // uncomment below and update the code to test the property occupation
-      //var instane = new BitpesaSdk.Sender();
+      //var instane = new TransferzeroSdk.Sender();
       //expect(instance).to.be();
     });
 
     it('should have the property nationality (base name: "nationality")', function() {
       // uncomment below and update the code to test the property nationality
-      //var instane = new BitpesaSdk.Sender();
+      //var instane = new TransferzeroSdk.Sender();
       //expect(instance).to.be();
     });
 
     it('should have the property onboardingStatus (base name: "onboarding_status")', function() {
       // uncomment below and update the code to test the property onboardingStatus
-      //var instane = new BitpesaSdk.Sender();
+      //var instane = new TransferzeroSdk.Sender();
       //expect(instance).to.be();
     });
 
     it('should have the property address (base name: "address")', function() {
       // uncomment below and update the code to test the property address
-      //var instane = new BitpesaSdk.Sender();
+      //var instane = new TransferzeroSdk.Sender();
       //expect(instance).to.be();
     });
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
-      //var instane = new BitpesaSdk.Sender();
+      //var instane = new TransferzeroSdk.Sender();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instane = new BitpesaSdk.Sender();
+      //var instane = new TransferzeroSdk.Sender();
       //expect(instance).to.be();
     });
 
     it('should have the property city (base name: "city")', function() {
       // uncomment below and update the code to test the property city
-      //var instane = new BitpesaSdk.Sender();
+      //var instane = new TransferzeroSdk.Sender();
       //expect(instance).to.be();
     });
 
     it('should have the property street (base name: "street")', function() {
       // uncomment below and update the code to test the property street
-      //var instane = new BitpesaSdk.Sender();
+      //var instane = new TransferzeroSdk.Sender();
       //expect(instance).to.be();
     });
 
     it('should have the property addressDescription (base name: "address_description")', function() {
       // uncomment below and update the code to test the property addressDescription
-      //var instane = new BitpesaSdk.Sender();
+      //var instane = new TransferzeroSdk.Sender();
       //expect(instance).to.be();
     });
 
     it('should have the property postalCode (base name: "postal_code")', function() {
       // uncomment below and update the code to test the property postalCode
-      //var instane = new BitpesaSdk.Sender();
+      //var instane = new TransferzeroSdk.Sender();
       //expect(instance).to.be();
     });
 
     it('should have the property birthDate (base name: "birth_date")', function() {
       // uncomment below and update the code to test the property birthDate
-      //var instane = new BitpesaSdk.Sender();
+      //var instane = new TransferzeroSdk.Sender();
       //expect(instance).to.be();
     });
 
     it('should have the property ip (base name: "ip")', function() {
       // uncomment below and update the code to test the property ip
-      //var instane = new BitpesaSdk.Sender();
+      //var instane = new TransferzeroSdk.Sender();
       //expect(instance).to.be();
     });
 
     it('should have the property documents (base name: "documents")', function() {
       // uncomment below and update the code to test the property documents
-      //var instane = new BitpesaSdk.Sender();
+      //var instane = new TransferzeroSdk.Sender();
       //expect(instance).to.be();
     });
 
     it('should have the property metadata (base name: "metadata")', function() {
       // uncomment below and update the code to test the property metadata
-      //var instane = new BitpesaSdk.Sender();
+      //var instane = new TransferzeroSdk.Sender();
       //expect(instance).to.be();
     });
 
     it('should have the property state (base name: "state")', function() {
       // uncomment below and update the code to test the property state
-      //var instane = new BitpesaSdk.Sender();
+      //var instane = new TransferzeroSdk.Sender();
       //expect(instance).to.be();
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new BitpesaSdk.Sender();
+      //var instane = new TransferzeroSdk.Sender();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property externalId (base name: "external_id")', function() {
+      // uncomment below and update the code to test the property externalId
+      //var instane = new TransferzeroSdk.Sender();
       //expect(instance).to.be();
     });
 
     it('should have the property errors (base name: "errors")', function() {
       // uncomment below and update the code to test the property errors
-      //var instane = new BitpesaSdk.Sender();
+      //var instane = new TransferzeroSdk.Sender();
       //expect(instance).to.be();
     });
 

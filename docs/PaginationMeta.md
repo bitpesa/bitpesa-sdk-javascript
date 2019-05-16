@@ -1,4 +1,4 @@
-# BitpesaSdk.PaginationMeta
+# TransferzeroSdk.PaginationMeta
 
 ## Properties
 Name | Type | Description | Notes

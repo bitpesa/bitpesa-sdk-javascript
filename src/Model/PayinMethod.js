@@ -1,6 +1,6 @@
 /**
- * BitPesa API
- * Reference documentation for the BitPesa API V1
+ * TransferZero API
+ * Reference documentation for the TransferZero API V1
  *
  * OpenAPI spec version: 1.0
  * 
@@ -17,7 +17,7 @@ import PayinMethodDetails from './PayinMethodDetails';
 /**
  * The PayinMethod model module.
  * @module Model/PayinMethod
- * @version 0.3.0
+ * @version 1.0.0
  */
 class PayinMethod {
     /**
@@ -83,19 +83,19 @@ PayinMethod.prototype['type'] = undefined;
 PayinMethod.prototype['in_details'] = undefined;
 
 /**
- * This will contain the description on where to pay the funds. Please see the [Collections from Senders](https://github.com/bitpesa/api-documentation/blob/master/additional-features.md#collections-from-senders) in the API documentation on what to expect here.
+ * This will contain the description on where to pay the funds. Please see the [Collections from Senders](https://github.com/transferzero/api-documentation/blob/master/additional-features.md#collections-from-senders) in the API documentation on what to expect here.
  * @member {Object} out_details
  */
 PayinMethod.prototype['out_details'] = undefined;
 
 /**
- * This will contain the instructions on how to pay the funds. Please see the [Collections from Senders](https://github.com/bitpesa/api-documentation/blob/master/additional-features.md#collections-from-senders) in the API documentation on what to expect here.
+ * This will contain the instructions on how to pay the funds. Please see the [Collections from Senders](https://github.com/transferzero/api-documentation/blob/master/additional-features.md#collections-from-senders) in the API documentation on what to expect here.
  * @member {Object} instructions
  */
 PayinMethod.prototype['instructions'] = undefined;
 
 /**
- * Describes which provider to use for collection. Please see the [Collections from Senders](https://github.com/bitpesa/api-documentation/blob/master/additional-features.md#collections-from-senders) in the API documentation on the valid values
+ * Describes which provider to use for collection. Please see the [Collections from Senders](https://github.com/transferzero/api-documentation/blob/master/additional-features.md#collections-from-senders) in the API documentation on the valid values
  * @member {String} provider
  */
 PayinMethod.prototype['provider'] = undefined;

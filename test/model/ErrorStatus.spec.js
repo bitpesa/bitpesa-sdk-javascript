@@ -1,6 +1,6 @@
 /**
- * BitPesa API
- * Reference documentation for the BitPesa API V1
+ * TransferZero API
+ * Reference documentation for the TransferZero API V1
  *
  * OpenAPI spec version: 1.0
  * 
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BitpesaSdk);
+    factory(root.expect, root.TransferzeroSdk);
   }
-}(this, function(expect, BitpesaSdk) {
+}(this, function(expect, TransferzeroSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BitpesaSdk.ErrorStatus();
+    instance = new TransferzeroSdk.ErrorStatus();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('ErrorStatus', function() {
     it('should create an instance of ErrorStatus', function() {
       // uncomment below and update the code to test ErrorStatus
-      //var instane = new BitpesaSdk.ErrorStatus();
-      //expect(instance).to.be.a(BitpesaSdk.ErrorStatus);
+      //var instane = new TransferzeroSdk.ErrorStatus();
+      //expect(instance).to.be.a(TransferzeroSdk.ErrorStatus);
     });
 
     it('should have the property status (base name: "status")', function() {
       // uncomment below and update the code to test the property status
-      //var instane = new BitpesaSdk.ErrorStatus();
+      //var instane = new TransferzeroSdk.ErrorStatus();
       //expect(instance).to.be();
     });
 
     it('should have the property error (base name: "error")', function() {
       // uncomment below and update the code to test the property error
-      //var instane = new BitpesaSdk.ErrorStatus();
+      //var instane = new TransferzeroSdk.ErrorStatus();
       //expect(instance).to.be();
     });
 

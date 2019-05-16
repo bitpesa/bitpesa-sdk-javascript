@@ -1,4 +1,4 @@
-# BitpesaSdk.PayoutMethodDetailsGHSBank
+# TransferzeroSdk.PayoutMethodDetailsGHSBank
 
 ## Properties
 Name | Type | Description | Notes

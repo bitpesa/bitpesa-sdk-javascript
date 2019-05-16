@@ -1,4 +1,4 @@
-# BitpesaSdk.ErrorStatus
+# TransferzeroSdk.ErrorStatus
 
 ## Properties
 Name | Type | Description | Notes

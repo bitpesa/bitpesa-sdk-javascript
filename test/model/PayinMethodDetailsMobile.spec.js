@@ -1,6 +1,6 @@
 /**
- * BitPesa API
- * Reference documentation for the BitPesa API V1
+ * TransferZero API
+ * Reference documentation for the TransferZero API V1
  *
  * OpenAPI spec version: 1.0
  * 
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BitpesaSdk);
+    factory(root.expect, root.TransferzeroSdk);
   }
-}(this, function(expect, BitpesaSdk) {
+}(this, function(expect, TransferzeroSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BitpesaSdk.PayinMethodDetailsMobile();
+    instance = new TransferzeroSdk.PayinMethodDetailsMobile();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('PayinMethodDetailsMobile', function() {
     it('should create an instance of PayinMethodDetailsMobile', function() {
       // uncomment below and update the code to test PayinMethodDetailsMobile
-      //var instane = new BitpesaSdk.PayinMethodDetailsMobile();
-      //expect(instance).to.be.a(BitpesaSdk.PayinMethodDetailsMobile);
+      //var instane = new TransferzeroSdk.PayinMethodDetailsMobile();
+      //expect(instance).to.be.a(TransferzeroSdk.PayinMethodDetailsMobile);
     });
 
     it('should have the property phoneNumber (base name: "phone_number")', function() {
       // uncomment below and update the code to test the property phoneNumber
-      //var instane = new BitpesaSdk.PayinMethodDetailsMobile();
+      //var instane = new TransferzeroSdk.PayinMethodDetailsMobile();
       //expect(instance).to.be();
     });
 
     it('should have the property sendInstructions (base name: "send_instructions")', function() {
       // uncomment below and update the code to test the property sendInstructions
-      //var instane = new BitpesaSdk.PayinMethodDetailsMobile();
+      //var instane = new TransferzeroSdk.PayinMethodDetailsMobile();
       //expect(instance).to.be();
     });
 

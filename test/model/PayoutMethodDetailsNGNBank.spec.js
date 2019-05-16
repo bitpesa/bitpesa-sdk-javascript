@@ -1,6 +1,6 @@
 /**
- * BitPesa API
- * Reference documentation for the BitPesa API V1
+ * TransferZero API
+ * Reference documentation for the TransferZero API V1
  *
  * OpenAPI spec version: 1.0
  * 
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BitpesaSdk);
+    factory(root.expect, root.TransferzeroSdk);
   }
-}(this, function(expect, BitpesaSdk) {
+}(this, function(expect, TransferzeroSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BitpesaSdk.PayoutMethodDetailsNGNBank();
+    instance = new TransferzeroSdk.PayoutMethodDetailsNGNBank();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,37 +50,37 @@
   describe('PayoutMethodDetailsNGNBank', function() {
     it('should create an instance of PayoutMethodDetailsNGNBank', function() {
       // uncomment below and update the code to test PayoutMethodDetailsNGNBank
-      //var instane = new BitpesaSdk.PayoutMethodDetailsNGNBank();
-      //expect(instance).to.be.a(BitpesaSdk.PayoutMethodDetailsNGNBank);
+      //var instane = new TransferzeroSdk.PayoutMethodDetailsNGNBank();
+      //expect(instance).to.be.a(TransferzeroSdk.PayoutMethodDetailsNGNBank);
     });
 
     it('should have the property firstName (base name: "first_name")', function() {
       // uncomment below and update the code to test the property firstName
-      //var instane = new BitpesaSdk.PayoutMethodDetailsNGNBank();
+      //var instane = new TransferzeroSdk.PayoutMethodDetailsNGNBank();
       //expect(instance).to.be();
     });
 
     it('should have the property lastName (base name: "last_name")', function() {
       // uncomment below and update the code to test the property lastName
-      //var instane = new BitpesaSdk.PayoutMethodDetailsNGNBank();
+      //var instane = new TransferzeroSdk.PayoutMethodDetailsNGNBank();
       //expect(instance).to.be();
     });
 
     it('should have the property bankCode (base name: "bank_code")', function() {
       // uncomment below and update the code to test the property bankCode
-      //var instane = new BitpesaSdk.PayoutMethodDetailsNGNBank();
+      //var instane = new TransferzeroSdk.PayoutMethodDetailsNGNBank();
       //expect(instance).to.be();
     });
 
     it('should have the property bankAccount (base name: "bank_account")', function() {
       // uncomment below and update the code to test the property bankAccount
-      //var instane = new BitpesaSdk.PayoutMethodDetailsNGNBank();
+      //var instane = new TransferzeroSdk.PayoutMethodDetailsNGNBank();
       //expect(instance).to.be();
     });
 
     it('should have the property bankAccountType (base name: "bank_account_type")', function() {
       // uncomment below and update the code to test the property bankAccountType
-      //var instane = new BitpesaSdk.PayoutMethodDetailsNGNBank();
+      //var instane = new TransferzeroSdk.PayoutMethodDetailsNGNBank();
       //expect(instance).to.be();
     });
 

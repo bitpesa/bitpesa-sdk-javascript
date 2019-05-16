@@ -1,4 +1,4 @@
-# BitpesaSdk.SenderState
+# TransferzeroSdk.SenderState
 
 ## Enum
 

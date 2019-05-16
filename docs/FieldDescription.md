@@ -1,4 +1,4 @@
-# BitpesaSdk.FieldDescription
+# TransferzeroSdk.FieldDescription
 
 ## Properties
 Name | Type | Description | Notes

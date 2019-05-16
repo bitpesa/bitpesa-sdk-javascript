@@ -1,6 +1,6 @@
 /**
- * BitPesa API
- * Reference documentation for the BitPesa API V1
+ * TransferZero API
+ * Reference documentation for the TransferZero API V1
  *
  * OpenAPI spec version: 1.0
  * 
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BitpesaSdk);
+    factory(root.expect, root.TransferzeroSdk);
   }
-}(this, function(expect, BitpesaSdk) {
+}(this, function(expect, TransferzeroSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BitpesaSdk.AccountValidationError();
+    instance = new TransferzeroSdk.AccountValidationError();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('AccountValidationError', function() {
     it('should create an instance of AccountValidationError', function() {
       // uncomment below and update the code to test AccountValidationError
-      //var instane = new BitpesaSdk.AccountValidationError();
-      //expect(instance).to.be.a(BitpesaSdk.AccountValidationError);
+      //var instane = new TransferzeroSdk.AccountValidationError();
+      //expect(instance).to.be.a(TransferzeroSdk.AccountValidationError);
     });
 
     it('should have the property error (base name: "error")', function() {
       // uncomment below and update the code to test the property error
-      //var instane = new BitpesaSdk.AccountValidationError();
+      //var instane = new TransferzeroSdk.AccountValidationError();
       //expect(instance).to.be();
     });
 

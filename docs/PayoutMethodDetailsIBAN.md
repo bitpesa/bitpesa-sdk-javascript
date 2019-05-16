@@ -1,4 +1,4 @@
-# BitpesaSdk.PayoutMethodDetailsIBAN
+# TransferzeroSdk.PayoutMethodDetailsIBAN
 
 ## Properties
 Name | Type | Description | Notes
