@@ -1,9 +1,13 @@
 import BitpesaSdk from 'bitpesa-sdk';
 
+// Please see our documentation at https://github.com/transferzero/api-documentation
+// and the API specification at http://api.transferzero.com/documentation/
+// for more information.
+
 const apiClient = new BitpesaSdk.ApiClient({
   apiKey: '<key>',
   apiSecret: '<secret>',
-  basePath: 'https://api-sandbox.bitpesa.co/v1'
+  basePath: 'https://api-sandbox.transferzero.com/v1'
 });
 
 // accountValidationExample(apiClient);
@@ -18,6 +22,9 @@ const apiClient = new BitpesaSdk.ApiClient({
 // getTransactionsByExternalId(apiClient);
 
 async function accountValidationExample(apiClient) {
+  // See https://github.com/transferzero/api-documentation/blob/master/additional-features.md#bank-account-name-enquiry
+  // for more information on how this feature can be used
+
   const request = new BitpesaSdk.AccountValidationRequest();
   request.bank_account = '9040009999999';
   request.bank_code = '190100';
@@ -41,6 +48,8 @@ async function accountValidationExample(apiClient) {
 }
 
 async function createSenderExample(apiClient) {
+  // For more details on senders please check https://github.com/transferzero/api-documentation/blob/master/transaction-flow.md#sender
+
   const api = new BitpesaSdk.SendersApi(apiClient);
   const sender = new BitpesaSdk.Sender();
 
@@ -78,6 +87,8 @@ async function createSenderExample(apiClient) {
 }
 
 async function updateSenderExample(apiClient) {
+  // For more details on senders please check https://github.com/transferzero/api-documentation/blob/master/transaction-flow.md#sender
+
   const api = new BitpesaSdk.SendersApi(apiClient);
   const sender = new BitpesaSdk.Sender();
 
@@ -104,12 +115,17 @@ async function updateSenderExample(apiClient) {
 }
 
 async function createTransactionExample(apiClient) {
+  // Please check our documentation at https://github.com/transferzero/api-documentation/blob/master/transaction-flow.md
+  // for details on how transactions work.
   const api = new BitpesaSdk.TransactionsApi(apiClient);
   const transaction = new BitpesaSdk.Transaction();
 
+  // When adding a sender to transaction, please use either an id or external_id. Providing both will result in a validation error.
+  // Please see our documentation at https://github.com/transferzero/api-documentation/blob/master/transaction-flow.md#sender
   const sender = new BitpesaSdk.Sender();
   sender.id = '58754ae1-d2e4-440c-9a81-d290ece2de0d';
 
+  // You can find the various payout options at https://github.com/transferzero/api-documentation/blob/master/transaction-flow.md#payout-details
   const ngnBankDetails = new BitpesaSdk.PayoutMethodDetails();
   ngnBankDetails.bank_account = '123456789';
   ngnBankDetails.bank_account_type = '20';
@@ -121,14 +137,20 @@ async function createTransactionExample(apiClient) {
   payoutMethod.type = 'NGN::Bank';
   payoutMethod.details = ngnBankDetails;
 
+  // Please see https://github.com/transferzero/api-documentation/blob/master/transaction-flow.md#requested-amount-and-currency
+  // on what the request amount and currencies do
   const recipient = new BitpesaSdk.Recipient();
   recipient.requested_amount = 10000;
   recipient.requested_currency = 'NGN';
   recipient.payout_method = payoutMethod;
 
+  // Similarly you can check https://github.com/transferzero/api-documentation/blob/master/transaction-flow.md#requested-amount-and-currency
+  // on details about the input currency parameter
   transaction.input_currency = 'GHS';
   transaction.sender = sender;
   transaction.recipients = [recipient];
+
+  // Find more details on external IDs at https://github.com/transferzero/api-documentation/blob/master/transaction-flow.md#external-id
   transaction.external_id = 'EXTRAN-5555';
 
   try {
@@ -151,6 +173,8 @@ async function createTransactionExample(apiClient) {
 async function createAndFundTransactionExample(apiClient) {
   const transactionId = await createTransactionExample(apiClient);
   if (transactionId != null) {
+    // Please see https://github.com/transferzero/api-documentation/blob/master/transaction-flow.md#funding-transactions
+    // on details about funding transactions
     const debit = new BitpesaSdk.Debit();
     debit.currency = 'GHS';
     debit.to_id = transactionId;
@@ -180,6 +204,8 @@ async function createAndFundTransactionExample(apiClient) {
 }
 
 async function getTransactionErrorMessageExample(apiClient) {
+  // Please see https://github.com/transferzero/api-documentation/blob/master/transaction-flow.md#receiving-error-messages
+  // on details about error messages
   const transactionId = 'f94a3af4-0637-4498-9184-7733bf0b8af7';
   const api = new BitpesaSdk.TransactionsApi(apiClient);
   const transaction = await api.getTransaction(transactionId);
@@ -191,6 +217,8 @@ async function getTransactionErrorMessageExample(apiClient) {
 }
 
 async function webhookParseExample(apiClient) {
+  // Please see https://github.com/transferzero/api-documentation#webhooks
+  // for more details about how webhooks / callbacks work from our system
   const webhookHeader = {
     "Authorization-Nonce": "authorization-nonce",
     "Authorization-Key": "authorization-key",
@@ -356,6 +384,13 @@ async function webhookParseExample(apiClient) {
     }
   }`;
 
+  // Once setting up an endpoint where you'll be receiving callbacks you can use the following code snippet
+  // to both verify that the webhook we sent out is legitimate, and then parse it's contents regardless of type.
+
+  // The details you need to provide are:
+  // - the body of the webhook/callback you received as a string
+  // - the url of your webhook, where you are awaiting the callbacks - this has to be the full URL
+  // - the authentication headers you have received on your webhook endpoint - as an object
 
   if (apiClient.validateRequest(webhookUrl, webhookContent, webhookHeader)) {
     const webhook = apiClient.parseResponseString(
@@ -411,6 +446,8 @@ async function getAccountsExample(apiClient) {
 }
 
 async function getSendersByExternalId(apiClient) {
+  // Find more details on external IDs at https://github.com/transferzero/api-documentation/blob/master/transaction-flow.md#external-id
+
   const api = new BitpesaSdk.SendersApi(apiClient, {});
   opts = { externalId: 'EXTSEN-5555' };
   try {
@@ -423,6 +460,9 @@ async function getSendersByExternalId(apiClient) {
 }
 
 async function getTransactionsByExternalId(apiClient) {
+  // Please see https://github.com/transferzero/api-documentation/blob/master/transaction-flow.md#external-id
+  // for more details on external IDs
+
   const api = new BitpesaSdk.TransactionsApi(apiClient, {});
   opts = { externalId: 'EXTRAN-5555' };
   try {
